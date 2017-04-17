@@ -1,0 +1,15 @@
+/Users/you/Projects/LinzGeoQuiz/iOS/obj/iPhoneSimulator/Debug/Xamarin.iOS,Version=v1.0.AssemblyAttribute.cs
+/Users/you/Projects/LinzGeoQuiz/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.2/ibtool/_BundleResourceWithLogicalName.items
+/Users/you/Projects/LinzGeoQuiz/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.2/actool/_PartialAppManifest.items
+/Users/you/Projects/LinzGeoQuiz/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.2/actool/_BundleResourceWithLogicalName.items
+/Users/you/Projects/LinzGeoQuiz/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.2/optimized/
+/Users/you/Projects/LinzGeoQuiz/iOS/bin/iPhoneSimulator/Debug/LinzGeoQuiz.iOS.exe.mdb
+/Users/you/Projects/LinzGeoQuiz/iOS/bin/iPhoneSimulator/Debug/LinzGeoQuiz.iOS.exe
+/Users/you/Projects/LinzGeoQuiz/iOS/obj/iPhoneSimulator/Debug/LinzGeoQuiz.iOS.exe
+/Users/you/Projects/LinzGeoQuiz/iOS/obj/iPhoneSimulator/Debug/LinzGeoQuiz.iOS.exe.mdb
+/Users/you/Projects/LinzGeoQuiz/iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Core.dll
+/Users/you/Projects/LinzGeoQuiz/iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Platform.dll
+/Users/you/Projects/LinzGeoQuiz/iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Platform.iOS.dll
+/Users/you/Projects/LinzGeoQuiz/iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Xaml.dll
+/Users/you/Projects/LinzGeoQuiz/iOS/bin/iPhoneSimulator/Debug/LinzGeoQuiz.dll
+/Users/you/Projects/LinzGeoQuiz/iOS/bin/iPhoneSimulator/Debug/LinzGeoQuiz.dll.mdb
