@@ -2,6 +2,26 @@ LinzGeoQuiz.Droid.MainActivity, LinzGeoQuiz.Droid;md503a613406f7d93cc274a3b34c67
 LinzGeoQuiz.Droid.MainActivity, LinzGeoQuiz.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md503a613406f7d93cc274a3b34c674ca76.MainActivity
 LinzGeoQuiz.Droid.MainActivity;md503a613406f7d93cc274a3b34c674ca76.MainActivity
 linzgeoquiz.droid.MainActivity;md503a613406f7d93cc274a3b34c674ca76.MainActivity
+Android.Support.Design.Widget.Snackbar/SnackbarActionClickImplementor, Xamarin.Android.Support.Design;android.support.design.widget.Snackbar_SnackbarActionClickImplementor
+Android.Support.Design.Widget.Snackbar+SnackbarActionClickImplementor, Xamarin.Android.Support.Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;android.support.design.widget.Snackbar_SnackbarActionClickImplementor
+Android.Support.Design.Widget.Snackbar.SnackbarActionClickImplementor;android.support.design.widget.Snackbar_SnackbarActionClickImplementor
+android.support.design.widget.Snackbar_SnackbarActionClickImplementor;android.support.design.widget.Snackbar_SnackbarActionClickImplementor
+Android.Support.Design.Widget.AppBarLayout/IOnOffsetChangedListenerImplementor, Xamarin.Android.Support.Design;mono.android.support.design.widget.AppBarLayout_OnOffsetChangedListenerImplementor
+Android.Support.Design.Widget.AppBarLayout+IOnOffsetChangedListenerImplementor, Xamarin.Android.Support.Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.design.widget.AppBarLayout_OnOffsetChangedListenerImplementor
+Android.Support.Design.Widget.AppBarLayout.IOnOffsetChangedListenerImplementor;mono.android.support.design.widget.AppBarLayout_OnOffsetChangedListenerImplementor
+mono.android.support.design.widget.AppBarLayout_OnOffsetChangedListenerImplementor;mono.android.support.design.widget.AppBarLayout_OnOffsetChangedListenerImplementor
+Android.Support.Design.Widget.NavigationView/IOnNavigationItemSelectedListenerImplementor, Xamarin.Android.Support.Design;mono.android.support.design.widget.NavigationView_OnNavigationItemSelectedListenerImplementor
+Android.Support.Design.Widget.NavigationView+IOnNavigationItemSelectedListenerImplementor, Xamarin.Android.Support.Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.design.widget.NavigationView_OnNavigationItemSelectedListenerImplementor
+Android.Support.Design.Widget.NavigationView.IOnNavigationItemSelectedListenerImplementor;mono.android.support.design.widget.NavigationView_OnNavigationItemSelectedListenerImplementor
+mono.android.support.design.widget.NavigationView_OnNavigationItemSelectedListenerImplementor;mono.android.support.design.widget.NavigationView_OnNavigationItemSelectedListenerImplementor
+Android.Support.Design.Widget.SwipeDismissBehavior/IOnDismissListenerImplementor, Xamarin.Android.Support.Design;mono.android.support.design.widget.SwipeDismissBehavior_OnDismissListenerImplementor
+Android.Support.Design.Widget.SwipeDismissBehavior+IOnDismissListenerImplementor, Xamarin.Android.Support.Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.design.widget.SwipeDismissBehavior_OnDismissListenerImplementor
+Android.Support.Design.Widget.SwipeDismissBehavior.IOnDismissListenerImplementor;mono.android.support.design.widget.SwipeDismissBehavior_OnDismissListenerImplementor
+mono.android.support.design.widget.SwipeDismissBehavior_OnDismissListenerImplementor;mono.android.support.design.widget.SwipeDismissBehavior_OnDismissListenerImplementor
+Android.Support.Design.Widget.TabLayout/IOnTabSelectedListenerImplementor, Xamarin.Android.Support.Design;mono.android.support.design.widget.TabLayout_OnTabSelectedListenerImplementor
+Android.Support.Design.Widget.TabLayout+IOnTabSelectedListenerImplementor, Xamarin.Android.Support.Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.design.widget.TabLayout_OnTabSelectedListenerImplementor
+Android.Support.Design.Widget.TabLayout.IOnTabSelectedListenerImplementor;mono.android.support.design.widget.TabLayout_OnTabSelectedListenerImplementor
+mono.android.support.design.widget.TabLayout_OnTabSelectedListenerImplementor;mono.android.support.design.widget.TabLayout_OnTabSelectedListenerImplementor
 Android.Support.V4.View.ViewPager/IOnPageChangeListenerImplementor, Xamarin.Android.Support.v4;mono.android.support.v4.view.ViewPager_OnPageChangeListenerImplementor
 Android.Support.V4.View.ViewPager+IOnPageChangeListenerImplementor, Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.v4.view.ViewPager_OnPageChangeListenerImplementor
 Android.Support.V4.View.ViewPager.IOnPageChangeListenerImplementor;mono.android.support.v4.view.ViewPager_OnPageChangeListenerImplementor
@@ -154,26 +174,6 @@ Android.Support.V7.Widget.RecyclerView/IRecyclerListenerImplementor, Xamarin.And
 Android.Support.V7.Widget.RecyclerView+IRecyclerListenerImplementor, Xamarin.Android.Support.v7.RecyclerView, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.v7.widget.RecyclerView_RecyclerListenerImplementor
 Android.Support.V7.Widget.RecyclerView.IRecyclerListenerImplementor;mono.android.support.v7.widget.RecyclerView_RecyclerListenerImplementor
 mono.android.support.v7.widget.RecyclerView_RecyclerListenerImplementor;mono.android.support.v7.widget.RecyclerView_RecyclerListenerImplementor
-Android.Support.Design.Widget.Snackbar/SnackbarActionClickImplementor, Xamarin.Android.Support.Design;android.support.design.widget.Snackbar_SnackbarActionClickImplementor
-Android.Support.Design.Widget.Snackbar+SnackbarActionClickImplementor, Xamarin.Android.Support.Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;android.support.design.widget.Snackbar_SnackbarActionClickImplementor
-Android.Support.Design.Widget.Snackbar.SnackbarActionClickImplementor;android.support.design.widget.Snackbar_SnackbarActionClickImplementor
-android.support.design.widget.Snackbar_SnackbarActionClickImplementor;android.support.design.widget.Snackbar_SnackbarActionClickImplementor
-Android.Support.Design.Widget.AppBarLayout/IOnOffsetChangedListenerImplementor, Xamarin.Android.Support.Design;mono.android.support.design.widget.AppBarLayout_OnOffsetChangedListenerImplementor
-Android.Support.Design.Widget.AppBarLayout+IOnOffsetChangedListenerImplementor, Xamarin.Android.Support.Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.design.widget.AppBarLayout_OnOffsetChangedListenerImplementor
-Android.Support.Design.Widget.AppBarLayout.IOnOffsetChangedListenerImplementor;mono.android.support.design.widget.AppBarLayout_OnOffsetChangedListenerImplementor
-mono.android.support.design.widget.AppBarLayout_OnOffsetChangedListenerImplementor;mono.android.support.design.widget.AppBarLayout_OnOffsetChangedListenerImplementor
-Android.Support.Design.Widget.NavigationView/IOnNavigationItemSelectedListenerImplementor, Xamarin.Android.Support.Design;mono.android.support.design.widget.NavigationView_OnNavigationItemSelectedListenerImplementor
-Android.Support.Design.Widget.NavigationView+IOnNavigationItemSelectedListenerImplementor, Xamarin.Android.Support.Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.design.widget.NavigationView_OnNavigationItemSelectedListenerImplementor
-Android.Support.Design.Widget.NavigationView.IOnNavigationItemSelectedListenerImplementor;mono.android.support.design.widget.NavigationView_OnNavigationItemSelectedListenerImplementor
-mono.android.support.design.widget.NavigationView_OnNavigationItemSelectedListenerImplementor;mono.android.support.design.widget.NavigationView_OnNavigationItemSelectedListenerImplementor
-Android.Support.Design.Widget.SwipeDismissBehavior/IOnDismissListenerImplementor, Xamarin.Android.Support.Design;mono.android.support.design.widget.SwipeDismissBehavior_OnDismissListenerImplementor
-Android.Support.Design.Widget.SwipeDismissBehavior+IOnDismissListenerImplementor, Xamarin.Android.Support.Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.design.widget.SwipeDismissBehavior_OnDismissListenerImplementor
-Android.Support.Design.Widget.SwipeDismissBehavior.IOnDismissListenerImplementor;mono.android.support.design.widget.SwipeDismissBehavior_OnDismissListenerImplementor
-mono.android.support.design.widget.SwipeDismissBehavior_OnDismissListenerImplementor;mono.android.support.design.widget.SwipeDismissBehavior_OnDismissListenerImplementor
-Android.Support.Design.Widget.TabLayout/IOnTabSelectedListenerImplementor, Xamarin.Android.Support.Design;mono.android.support.design.widget.TabLayout_OnTabSelectedListenerImplementor
-Android.Support.Design.Widget.TabLayout+IOnTabSelectedListenerImplementor, Xamarin.Android.Support.Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.design.widget.TabLayout_OnTabSelectedListenerImplementor
-Android.Support.Design.Widget.TabLayout.IOnTabSelectedListenerImplementor;mono.android.support.design.widget.TabLayout_OnTabSelectedListenerImplementor
-mono.android.support.design.widget.TabLayout_OnTabSelectedListenerImplementor;mono.android.support.design.widget.TabLayout_OnTabSelectedListenerImplementor
 Xamarin.Forms.Platform.Android.CellAdapter, Xamarin.Forms.Platform.Android;md5b60ffeb829f638581ab2bb9b1a7f4f3f.CellAdapter
 Xamarin.Forms.Platform.Android.CellAdapter, Xamarin.Forms.Platform.Android, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null;md5b60ffeb829f638581ab2bb9b1a7f4f3f.CellAdapter
 Xamarin.Forms.Platform.Android.CellAdapter;md5b60ffeb829f638581ab2bb9b1a7f4f3f.CellAdapter
