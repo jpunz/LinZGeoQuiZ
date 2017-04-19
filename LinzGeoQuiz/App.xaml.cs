@@ -8,7 +8,7 @@ namespace LinzGeoQuiz
 		{
 			InitializeComponent();
 
-			MainPage = new LinzGeoQuizPage();
+			MainPage = new MainTabbedPage();
 		}
 
 		protected override void OnStart()

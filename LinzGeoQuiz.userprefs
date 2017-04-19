@@ -1,12 +1,23 @@
 ﻿<Properties StartupConfiguration="{B6EAA758-8BA2-4CBF-B2D0-13AB0C431438}|Default">
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/AppDelegate.cs">
+    <Files>
+      <File FileName="LinzGeoQuiz/App.xaml" Line="2" Column="140" />
+      <File FileName="LinzGeoQuiz/MainTabbedPage.xaml" Line="1" Column="1" />
+      <File FileName="LinzGeoQuiz/Game.xaml" Line="1" Column="1" />
+      <File FileName="LinzGeoQuiz/obj/Debug/LinzGeoQuiz.App.xaml.g.cs" Line="19" Column="1" />
+      <File FileName="LinzGeoQuiz/App.xaml.cs" Line="11" Column="33" />
+      <File FileName="iOS/AppDelegate.cs" Line="16" Column="29" />
+      <File FileName="Droid/MainActivity.cs" Line="24" Column="41" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/you/Documents/Dev/LinzGeoQuiz/LinzGeoQuiz/obj/Debug/LinzGeoQuiz.MainTabbedPage.xaml.g.cs" relfile="LinzGeoQuiz/obj/Debug/LinzGeoQuiz.MainTabbedPage.xaml.g.cs" line="15" column="68" />
+      <Breakpoint file="/Users/you/Documents/Dev/LinZGeoQuiZ/LinzGeoQuiz/obj/Debug/LinzGeoQuiz.MainTabbedPage.xaml.g.cs" relfile="LinzGeoQuiz/obj/Debug/LinzGeoQuiz.MainTabbedPage.xaml.g.cs" line="15" column="68" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.LinzGeoQuiz.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
   <MonoDevelop.Ide.ItemProperties.LinzGeoQuiz.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.ACD629DC-8CB5-4E47-BC9B-4751357DC387" />
 </Properties>
