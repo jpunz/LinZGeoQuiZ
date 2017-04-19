@@ -44,3 +44,11 @@ C:\Users\juerg\Desktop\LinZGeoQuiZ\LinzGeoQuiz\obj\Debug\LinzGeoQuiz.dll.mdb
 C:\Users\juerg\Desktop\LinZGeoQuiZ\LinzGeoQuiz\bin\Debug\LinzGeoQuiz.dll.mdb
 C:\Users\juerg\Desktop\LinZGeoQuiZ\LinzGeoQuiz\obj\Debug\LinzGeoQuiz.dll.mdb
 C:\Users\juerg\Desktop\LinZGeoQuiZ\LinzGeoQuiz\bin\Debug\LinzGeoQuiz.dll.mdb
+C:\Users\juerg\Desktop\LinZGeoQuiZ\LinzGeoQuiz\obj\Debug\LinzGeoQuiz.dll.mdb
+C:\Users\juerg\Desktop\LinZGeoQuiZ\LinzGeoQuiz\bin\Debug\LinzGeoQuiz.dll.mdb
+C:\Users\juerg\Desktop\LinZGeoQuiZ\LinzGeoQuiz\obj\Debug\LinzGeoQuiz.dll.mdb
+C:\Users\juerg\Desktop\LinZGeoQuiZ\LinzGeoQuiz\bin\Debug\LinzGeoQuiz.dll.mdb
+C:\Users\juerg\Desktop\LinZGeoQuiZ\LinzGeoQuiz\obj\Debug\LinzGeoQuiz.dll.mdb
+C:\Users\juerg\Desktop\LinZGeoQuiZ\LinzGeoQuiz\bin\Debug\LinzGeoQuiz.dll.mdb
+C:\Users\juerg\Desktop\LinZGeoQuiZ\LinzGeoQuiz\obj\Debug\LinzGeoQuiz.dll.mdb
+C:\Users\juerg\Desktop\LinZGeoQuiZ\LinzGeoQuiz\bin\Debug\LinzGeoQuiz.dll.mdb
