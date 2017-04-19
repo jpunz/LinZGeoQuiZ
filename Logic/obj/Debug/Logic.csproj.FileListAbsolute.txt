@@ -49,3 +49,4 @@ C:\Users\juerg\Desktop\LinZGeoQuiZ1\Logic\obj\Debug\Logic.csproj.App.config
 C:\Users\juerg\Desktop\LinZGeoQuiZ1\Logic\obj\Debug\Logic.csprojResolveAssemblyReference.cache
 C:\Users\juerg\Desktop\LinZGeoQuiZ1\Logic\obj\Debug\Logic.dll
 C:\Users\juerg\Desktop\LinZGeoQuiZ1\Logic\obj\Debug\Logic.pdb
+C:\Users\juerg\Desktop\LinZGeoQuiZ\Logic\obj\Debug\Logic.csprojResolveAssemblyReference.cache

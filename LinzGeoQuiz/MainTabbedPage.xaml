@@ -3,7 +3,7 @@
              xmlns:pages="clr-namespace:LinzGeoQuiz;assembly=LinzGeoQuiz"
              Title="MainTabbedPage">
   <!--Pages can be added as references or inline-->
-    <pages:Overview Title="Overview"/>
+    <pages:Overview Title="Overview" Icon="game.png"/>
     <pages:Game Title="Play"/>
     <pages:Settings Title="Settings"/>
 </TabbedPage>

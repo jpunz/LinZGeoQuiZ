@@ -113,6 +113,7 @@ class MonoPackageManager_Resources {
 		"Xamarin.Forms.Platform.dll",
 		"Xamarin.Forms.Xaml.dll",
 		"LinzGeoQuiz.dll",
+		"Xamarin.Forms.Maps.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};
