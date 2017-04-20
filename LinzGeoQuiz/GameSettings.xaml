@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="LinzGeoQuiz.GameSettings">
+	<StackLayout Margin="20,50,20,30">
+		<Label XAlign="Center" Text="Game Settings" FontAttributes="Bold" FontSize="30" />
+		<Label Text="Category:" Margin="0,20,0,0" />
+		<Picker HorizontalOptions="FillAndExpand" Title="Select a category">
+			<Picker.Items>
+                <x:String>Streets</x:String> 
+                <x:String>Public Buildings</x:String>
+				<x:String>Retirement Homes</x:String> 
+                <x:String>Mixed</x:String>
+            </Picker.Items>
+		</Picker>
+		<StackLayout Orientation="Horizontal" Margin="0,20,0,0">
+			<Label Text="Number of questions:" YAlign="Center" /><Label x:Name="LblNrQuestions" Text="20" YAlign="Center" WidthRequest="50"/>
+			<Stepper Increment="5" Value="20" Maximum="20" Minimum="5" ValueChanged="Handle_ValueChanged" />
+		</StackLayout>
+		<StackLayout Orientation="Horizontal" Margin="0,20,0,0">
+			<Label Text="Time game:" YAlign="Center" />
+			<Switch IsToggled="false" />
+		</StackLayout>
+		<Button Text="Start" WidthRequest="100" HorizontalOptions="Center" VerticalOptions="EndAndExpand" BorderColor="Gray" BorderWidth="1" Clicked="Handle_Clicked" />
+	</StackLayout>
+</ContentPage>

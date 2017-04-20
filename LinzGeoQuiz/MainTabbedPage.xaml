@@ -4,6 +4,6 @@
              Title="MainTabbedPage">
   <!--Pages can be added as references or inline-->
     <pages:Overview Title="Overview"/>
-    <pages:Game Title="Play"/>
+    <pages:GameSettings Title="Play"/>
     <pages:Settings Title="Settings"/>
 </TabbedPage>

@@ -43,6 +43,9 @@
     <EmbeddedResource Include="MainTabbedPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="GameSettings.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -60,6 +63,9 @@
     </Compile>
     <Compile Include="MainTabbedPage.xaml.cs">
       <DependentUpon>MainTabbedPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GameSettings.xaml.cs">
+      <DependentUpon>GameSettings.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
