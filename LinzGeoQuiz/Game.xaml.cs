@@ -29,6 +29,7 @@ namespace LinzGeoQuiz
 
 		void Cancel_Handle_Clicked(object sender, System.EventArgs e)
 		{
+			Navigation.PopModalAsync();
 		}
 
 		void Done_Handle_Clicked(object sender, System.EventArgs e)
