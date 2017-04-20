@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Xamarin.Forms;
 using Logic.Database;
 using Logic.Model;
+using Xamarin.Forms.Maps;
 
 namespace LinzGeoQuiz
 {
@@ -22,6 +23,7 @@ namespace LinzGeoQuiz
 		private void setNewStreet()
 		{
 			LblGeoObjectName.Text = System.Linq.Enumerable.ElementAt(geoObjects, new Random().Next(geoObjects.Count - 1)).name;
+			map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(48.286998, 14.294665), Distance.FromKilometers(5)));
 		}
 
 		void Handle_Clicked(object sender, System.EventArgs e)
