@@ -11,5 +11,10 @@ namespace LinzGeoQuiz
 		{
 			InitializeComponent();
 		}
+
+		void Login_Clicked(object sender, System.EventArgs e)
+		{
+			Application.Current.MainPage = new Login();
+		}
 	}
 }
