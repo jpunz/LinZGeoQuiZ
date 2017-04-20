@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>LinzGeoQuiz.Droid</RootNamespace>
     <AssemblyName>LinzGeoQuiz.Droid</AssemblyName>
-    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -37,6 +37,20 @@
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <AndroidKeyStore>True</AndroidKeyStore>
+    <AndroidSigningKeyStore>public.keystore</AndroidSigningKeyStore>
+    <AndroidSigningStorePass>abophgb</AndroidSigningStorePass>
+    <AndroidSigningKeyAlias>LinZGeoQuiZReleaseKey</AndroidSigningKeyAlias>
+    <AndroidSigningKeyPass>abophgb</AndroidSigningKeyPass>
+</PropertyGroup>
+<PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <AndroidKeyStore>True</AndroidKeyStore>
+    <AndroidSigningKeyStore>debug.keystore</AndroidSigningKeyStore>
+    <AndroidSigningStorePass>abophgb</AndroidSigningStorePass>
+    <AndroidSigningKeyAlias>LinZGeoQuiZDebugKey</AndroidSigningKeyAlias>
+    <AndroidSigningKeyPass>abophgb</AndroidSigningKeyPass>
+</PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
