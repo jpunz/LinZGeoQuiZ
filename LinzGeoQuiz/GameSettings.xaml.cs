@@ -20,7 +20,8 @@ namespace LinzGeoQuiz
 
 		void Handle_Clicked(object sender, System.EventArgs e)
 		{
-			Application.Current.MainPage = new Game();
+			//Application.Current.MainPage = new Game();
+			Navigation.PushModalAsync(new Game());
 		}
 	}
 }

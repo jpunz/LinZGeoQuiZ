@@ -2461,8 +2461,11 @@ namespace LinzGeoQuiz.Droid
 			// aapt resource value: 0x7f0200cb
 			public const int mr_ic_play_light = 2130837707;
 			
+			// aapt resource value: 0x7f0200cd
+			public const int notification_template_icon_bg = 2130837709;
+			
 			// aapt resource value: 0x7f0200cc
-			public const int notification_template_icon_bg = 2130837708;
+			public const int Stop = 2130837708;
 			
 			static Drawable()
 			{
