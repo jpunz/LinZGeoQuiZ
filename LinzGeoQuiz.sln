@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinzGeoQuiz.Droid", "Droid\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic", "Logic\Logic.csproj", "{9CC123F4-C776-4D4B-8F90-E95B12D16E29}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scripts", "Scripts\Scripts.csproj", "{FF12E4BD-87F3-49EB-99DD-CE60996CBFE9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,6 +70,18 @@ Global
 		{9CC123F4-C776-4D4B-8F90-E95B12D16E29}.Release|iPhone.Build.0 = Release|Any CPU
 		{9CC123F4-C776-4D4B-8F90-E95B12D16E29}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{9CC123F4-C776-4D4B-8F90-E95B12D16E29}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{FF12E4BD-87F3-49EB-99DD-CE60996CBFE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF12E4BD-87F3-49EB-99DD-CE60996CBFE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF12E4BD-87F3-49EB-99DD-CE60996CBFE9}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{FF12E4BD-87F3-49EB-99DD-CE60996CBFE9}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{FF12E4BD-87F3-49EB-99DD-CE60996CBFE9}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{FF12E4BD-87F3-49EB-99DD-CE60996CBFE9}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{FF12E4BD-87F3-49EB-99DD-CE60996CBFE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF12E4BD-87F3-49EB-99DD-CE60996CBFE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF12E4BD-87F3-49EB-99DD-CE60996CBFE9}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{FF12E4BD-87F3-49EB-99DD-CE60996CBFE9}.Release|iPhone.Build.0 = Release|Any CPU
+		{FF12E4BD-87F3-49EB-99DD-CE60996CBFE9}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{FF12E4BD-87F3-49EB-99DD-CE60996CBFE9}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
