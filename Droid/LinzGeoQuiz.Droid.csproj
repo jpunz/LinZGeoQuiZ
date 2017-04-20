@@ -37,20 +37,6 @@
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
-    <AndroidKeyStore>True</AndroidKeyStore>
-    <AndroidSigningKeyStore>public.keystore</AndroidSigningKeyStore>
-    <AndroidSigningStorePass>abophgb</AndroidSigningStorePass>
-    <AndroidSigningKeyAlias>LinZGeoQuiZReleaseKey</AndroidSigningKeyAlias>
-    <AndroidSigningKeyPass>abophgb</AndroidSigningKeyPass>
-</PropertyGroup>
-<PropertyGroup Condition="'$(Configuration)' == 'Debug'">
-    <AndroidKeyStore>True</AndroidKeyStore>
-    <AndroidSigningKeyStore>debug.keystore</AndroidSigningKeyStore>
-    <AndroidSigningStorePass>abophgb</AndroidSigningStorePass>
-    <AndroidSigningKeyAlias>LinZGeoQuiZDebugKey</AndroidSigningKeyAlias>
-    <AndroidSigningKeyPass>abophgb</AndroidSigningKeyPass>
-</PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
