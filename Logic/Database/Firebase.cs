@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Logic.Database
 {
-    class Firebase
+    public class Firebase
     {
         private const string AUTHSECRET = "tqbbj0jnqp04G3LfRzptLBL82pSvBDW374GeXJEl";
         private const string URL = "https://linzgeoquiz.firebaseio.com";

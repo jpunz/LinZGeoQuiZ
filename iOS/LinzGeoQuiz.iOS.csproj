@@ -106,6 +106,10 @@
       <Project>{5204A508-FBAA-47A3-B676-61B33100A7EC}</Project>
       <Name>LinzGeoQuiz</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Logic\Logic.csproj">
+      <Project>{9CC123F4-C776-4D4B-8F90-E95B12D16E29}</Project>
+      <Name>Logic</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">

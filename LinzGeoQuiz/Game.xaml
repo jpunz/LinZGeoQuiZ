@@ -4,9 +4,9 @@
 	<Grid>
         <map:Map x:Name="map" MapType="Satellite" />
 		<ContentView HorizontalOptions="Center" VerticalOptions="Start" WidthRequest="250" BackgroundColor="White" Margin="0,40,0,0" HeightRequest="30">
-			<Label Text="Wienerstraße" FontAttributes="Bold" XAlign="Center" YAlign="Center" />
+			<Label x:Name="LblGeoObjectName" Text="Wienerstraße" FontAttributes="Bold" XAlign="Center" YAlign="Center" />
 		</ContentView>
-		<Button Image="Done.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="End" Margin="0,0,0,40" />
+		<Button Image="Done.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="End" Margin="0,0,0,40" Clicked="Handle_Clicked" />
 	</Grid>
 	 
 </ContentPage>

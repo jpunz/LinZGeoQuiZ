@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Logic.Model
 {
-    class GeoObject
+    public class GeoObject
     {
         public double longitude { get; set; }
         public double latitude { get; set; }
