@@ -1,5 +1,13 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="LinzGeoQuiz.Overview">
 	<ContentPage.Content>
+		<StackLayout Spacing="10" x:Name="layout">
+			<Label XAlign="Center" Text="Overview" FontAttributes="Bold" FontSize="30" Margin="0,50,0,0"/>
+
+			<Label XAlign="Center" Text="User: test@mail.com" Margin="0,20,0,0"/>
+			<Label XAlign="Center" Text="Avg. Deviation: 12.2km" />
+			<Label XAlign="Center" Text="Avg. Correctness: 67%" />
+			<Label XAlign="Center" Text="Games: 17" />
+	    </StackLayout>
 	</ContentPage.Content>
 </ContentPage>
