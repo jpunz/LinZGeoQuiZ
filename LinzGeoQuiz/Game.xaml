@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="LinzGeoQuiz.Game"
              xmlns:map="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps">
-    <StackLayout VerticalOptions="StartAndExpand" Padding="30">
-        <map:Map WidthRequest="320" HeightRequest="200"
-            x:Name="MyMap"
-            MapType="Hybrid" />
-    </StackLayout>
+	<Grid>
+        <map:Map x:Name="map" MapType="Satellite" />
+		<ContentView HorizontalOptions="Center" VerticalOptions="Start" WidthRequest="250" BackgroundColor="White" Margin="0,40,0,0" HeightRequest="30">
+			<Label Text="Wienerstraße" FontAttributes="Bold" XAlign="Center" YAlign="Center" />
+		</ContentView>
+		<Button Image="Done.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="End" Margin="0,0,0,40" />
+	</Grid>
+	 
 </ContentPage>
