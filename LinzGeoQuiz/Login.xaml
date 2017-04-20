@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="LinzGeoQuiz.Login">
+	<ContentPage.Content>
+
+		<StackLayout Spacing="10" x:Name="layout" Margin="20,0,20,30">
+			<Label XAlign="Center" Text="Login" FontAttributes="Bold" FontSize="30" Margin="0,50,0,0"/>
+			<Entry Placeholder="Username" Margin="0,50,0,0"></Entry>
+			<Entry Placeholder="Password" Margin="0,10,0,0" IsPassword="true"></Entry>
+			<Button Text="Login" Margin="0,50,0,0" Clicked="Login_Clicked" />
+			<Button Text="Register" Clicked="Register_Clicked" />
+			<Button Text="Forgot Password" Clicked="ForgotPW_Clicked" />
+			<Button Text="Cancel" Clicked="Cancel_Clicked" />
+	    </StackLayout>
+		
+	</ContentPage.Content>
+</ContentPage>
