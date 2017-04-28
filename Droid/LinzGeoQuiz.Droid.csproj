@@ -140,6 +140,10 @@
     <AndroidResource Include="Resources\drawable-xhdpi\Stop.png" />
     <AndroidResource Include="Resources\drawable\Stop.png" />
     <AndroidResource Include="Resources\drawable-hdpi\Stop.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\Next.png" />
+    <AndroidResource Include="Resources\drawable\Next.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Next.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Next.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CustomElement\" />

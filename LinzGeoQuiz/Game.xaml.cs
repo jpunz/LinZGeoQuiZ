@@ -27,6 +27,7 @@ namespace LinzGeoQuiz
 			LblGeoObjectName.Text = System.Linq.Enumerable.ElementAt(geoObjects, new Random().Next(geoObjects.Count - 1)).name;
 			map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(48.286998, 14.294665), Distance.FromKilometers(5)));
 			LblGeoObjectName.TextColor = Color.Black;
+			BtnDone.Image = "Done";
 		}
 
 		void Handle_Tap(object sender, LinzGeoQuiz.CustomElement.TapEventArgs e)
@@ -46,6 +47,8 @@ namespace LinzGeoQuiz
 		{
 			if (map.Pins.Count == 1 && LblGeoObjectName.TextColor.Equals(Color.Black))
 			{
+				BtnDone.Image = "Next";
+
 				var possibleAddresses = await geoCoder.GetAddressesForPositionAsync(map.Pins[0].Position);
 
 				foreach (var address in possibleAddresses)

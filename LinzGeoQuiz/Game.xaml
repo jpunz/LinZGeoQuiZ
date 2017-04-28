@@ -7,7 +7,7 @@
 			<Label x:Name="LblGeoObjectName" Text="Wienerstraße" FontAttributes="Bold" XAlign="Center" YAlign="Center" />
 		</ContentView>
 		<Button Image="Stop.png" WidthRequest="25" HeightRequest="25" HorizontalOptions="End" VerticalOptions="Start" Margin="0,20,20,0" Clicked="Cancel_Handle_Clicked" />
-		<Button Image="Done.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="End" Margin="0,0,0,40" Clicked="Done_Handle_Clicked" />
+		<Button x:Name="BtnDone" Image="Done.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="End" Margin="0,0,0,40" Clicked="Done_Handle_Clicked" />
 	</Grid>
 	 
 </ContentPage>
