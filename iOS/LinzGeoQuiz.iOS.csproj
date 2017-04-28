@@ -121,6 +121,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="CustomElement\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -133,6 +134,7 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="CustomElement\ExtendedMapRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Done.png" />
