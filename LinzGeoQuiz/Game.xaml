@@ -6,8 +6,16 @@
 		<ContentView HorizontalOptions="Center" VerticalOptions="Start" WidthRequest="250" BackgroundColor="White" Margin="0,40,0,0" HeightRequest="30">
 			<Label x:Name="LblGeoObjectName" Text="Wienerstraße" FontAttributes="Bold" XAlign="Center" YAlign="Center" />
 		</ContentView>
-		<Button Image="Stop.png" WidthRequest="25" HeightRequest="25" HorizontalOptions="End" VerticalOptions="Start" Margin="0,20,20,0" Clicked="Cancel_Handle_Clicked" />
-		<Button x:Name="BtnDone" Image="Done.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="End" Margin="0,0,0,40" Clicked="Done_Handle_Clicked" />
+		<Image x:Name="BtnDone" Source="Done.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="End" Margin="0,0,0,40" >
+			<Image.GestureRecognizers>
+		        <TapGestureRecognizer Tapped="Done_Handle_Clicked"/>
+  			</Image.GestureRecognizers>
+		</Image>
+		<Image Source="Stop.png" WidthRequest="25" HeightRequest="25" HorizontalOptions="End" VerticalOptions="Start" Margin="0,20,20,0" >
+			<Image.GestureRecognizers>
+		        <TapGestureRecognizer Tapped="Cancel_Handle_Clicked"/>
+  			</Image.GestureRecognizers>
+		</Image>
 	</Grid>
 	 
 </ContentPage>
