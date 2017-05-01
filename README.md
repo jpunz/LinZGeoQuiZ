@@ -28,7 +28,7 @@ Brief description (perhaps bulletpoints) on the used technology stack.
 * Christian Obermayr
 * Jürgen Punz
 
-# Artefacts
+## Artefacts
 
 * [Project Proposal](documents/proposal.pdf)
 * [Screen Design](documents/ScreenDesigns.bmpr)
