@@ -28,11 +28,11 @@ Brief description (perhaps bulletpoints) on the used technology stack.
 * Christian Obermayr
 * Jürgen Punz
 
-# Artefacts
+## Artefacts
 
 * [Project Proposal](documents/proposal.pdf)
-* [Screen Design](documents/ScreenDesigns.bmpr)
-<!--* [UI Sketches](documents/sketch-presentation.pdf), [MyBalsamiq](https://www.mybalsamiq.com)-->
+<!--* [Screen Design](documents/ScreenDesigns.bmpr)-->
+* [UI Sketches](documents/ScreenDesigns.bmpr), [MyBalsamiq](https://www.mybalsamiq.com)
 <!--* [Peer Talk Slides](documents/peer-talk.pdf)-->
 <!--* [Final Project Presentation](documents/final-presentation.pdf)-->
 <!--* Code is living in `src`-->
