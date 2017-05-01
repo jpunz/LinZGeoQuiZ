@@ -144,6 +144,9 @@
     <AndroidResource Include="Resources\drawable\Next.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\Next.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\Next.png" />
+    <AndroidResource Include="Resources\drawable\game.png" />
+    <AndroidResource Include="Resources\drawable\home.png" />
+    <AndroidResource Include="Resources\drawable\settings.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CustomElement\" />
