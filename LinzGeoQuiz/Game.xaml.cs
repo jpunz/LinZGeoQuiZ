@@ -18,11 +18,12 @@ namespace LinzGeoQuiz
 		{
 			InitializeComponent();
 
-			Task.Factory.StartNew(() => { geoObjects = new Firebase().getStreets(); })
-			    .ContinueWith(_ => { setNewStreet();}, TaskScheduler.FromCurrentSynchronizationContext());
-
+			//Task.Factory.StartNew(() => { geoObjects = new Firebase().getStreets(); })
+			//    .ContinueWith(_ => { setNewStreet();}, TaskScheduler.FromCurrentSynchronizationContext());
+			geoObjects = new Firebase().getStreets();
 
 			geoCoder = new Geocoder();
+            setNewStreet();
 		}
 
 		private void setNewStreet()
@@ -41,9 +42,9 @@ namespace LinzGeoQuiz
 			}
 		}
 
-		void Cancel_Handle_Clicked(object sender, System.EventArgs e)
+		async void Cancel_Handle_Clicked(object sender, System.EventArgs e)
 		{
-			Navigation.PopModalAsync();
+			await Navigation.PopModalAsync();
 		}
 
 		async void Done_Handle_Clicked(object sender, System.EventArgs e)

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="at.abop.linzgeoquiz">
 	<uses-sdk android:minSdkVersion="15" />
-	<meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyBbGVLLRLq2A7qljZ2movlTOa9Zfe6qHW4" />
 	<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
-	<application android:label="Linz Geo Quiz" />
+	<application android:label="Linz Geo Quiz">
+		<meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyBbGVLLRLq2A7qljZ2movlTOa9Zfe6qHW4" />
+	</application>
 </manifest>

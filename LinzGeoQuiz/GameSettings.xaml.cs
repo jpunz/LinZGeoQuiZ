@@ -18,9 +18,9 @@ namespace LinzGeoQuiz
 			LblNrQuestions.Text = ((Stepper)sender).Value.ToString();
 		}
 
-		void Handle_Clicked(object sender, System.EventArgs e)
+		async void Handle_Clicked(object sender, System.EventArgs e)
 		{
-			Navigation.PushModalAsync(new Game());
+			await Navigation.PushModalAsync(new Game());
 		}
 	}
 }
