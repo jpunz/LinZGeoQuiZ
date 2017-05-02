@@ -27,7 +27,7 @@ namespace LinzGeoQuiz.Droid.CustomElement
 				_map.MapClick -= googleMap_MapClick;
 			base.OnElementChanged(e);
 			if (Control != null)
-				((MapView)Control).GetMapAsync(this);
+				Control.GetMapAsync(this);
 		}
 
 		private void googleMap_MapClick(object sender, GoogleMap.MapClickEventArgs e)

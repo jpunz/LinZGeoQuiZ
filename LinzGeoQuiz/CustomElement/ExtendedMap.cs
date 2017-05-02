@@ -6,6 +6,7 @@ namespace LinzGeoQuiz.CustomElement
 	public class ExtendedMap : Map
 	{
 		public event EventHandler<TapEventArgs> Tap;
+
 		public ExtendedMap()
 		{
 
