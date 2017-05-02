@@ -5,6 +5,7 @@ using Xamarin.Forms;
 using Logic.Database;
 using Logic.Model;
 using Xamarin.Forms.Maps;
+using System.Threading.Tasks;
 
 namespace LinzGeoQuiz
 {
@@ -16,10 +17,12 @@ namespace LinzGeoQuiz
 		public Game()
 		{
 			InitializeComponent();
-			geoObjects = new Firebase().getStreets();
-			geoCoder = new Geocoder();
 
-			setNewStreet();
+			Task.Factory.StartNew(() => { geoObjects = new Firebase().getStreets(); })
+			    .ContinueWith(_ => { setNewStreet();}, TaskScheduler.FromCurrentSynchronizationContext());
+
+
+			geoCoder = new Geocoder();
 		}
 
 		private void setNewStreet()
