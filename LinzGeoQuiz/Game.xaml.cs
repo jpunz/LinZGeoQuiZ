@@ -32,18 +32,12 @@ namespace LinzGeoQuiz
 			geoObjects = new Firebase().getStreets();
 
 			geoCoder = new Geocoder();
-		}
 
-		protected override void OnAppearing()
-		{
-			base.OnAppearing();
-
-			setNewStreet();
-		}
+            setNewStreet();
+        }
 
 		private void setNewStreet()
 		{
-			map.MoveToMapRegion(MapSpan.FromCenterAndRadius(new Position(48.286998, 14.294665), Distance.FromKilometers(5)), true);
 			LblGeoObjectName.Text = System.Linq.Enumerable.ElementAt(geoObjects, new Random().Next(geoObjects.Count - 1)).name;
 			LblGeoObjectName.TextColor = Color.Black;
 			BtnDone.Source = "Done.png";
@@ -92,7 +86,8 @@ namespace LinzGeoQuiz
 			{
 				((MapViewModel)map.BindingContext).clearPins();
 
-				setNewStreet();
+                map.MoveToMapRegion(MapSpan.FromCenterAndRadius(new Position(48.286998, 14.294665), Distance.FromKilometers(5)), true);
+                setNewStreet();
 			}
 		}
 
