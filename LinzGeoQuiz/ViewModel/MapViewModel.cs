@@ -77,7 +77,7 @@ namespace LinzGeoQuiz.ViewModel
 			{
 				Position = position,
 				ShowCallout = true,
-				DefaultPinColor = Color.Green,
+				DefaultPinColor = Color.LawnGreen,
 				Title = "Correct Location",
 				Subtitle = street
 			};
