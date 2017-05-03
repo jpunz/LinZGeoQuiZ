@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using TK.CustomMap.iOSUnified;
 using UIKit;
+using Xamarin;
+using Xamarin.Forms;
 
 namespace LinzGeoQuiz.iOS
 {
@@ -12,12 +15,20 @@ namespace LinzGeoQuiz.iOS
 	{
 		public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 		{
-			global::Xamarin.Forms.Forms.Init();
-			Xamarin.FormsMaps.Init();
+			//global::Xamarin.Forms.Forms.Init();
+			//Xamarin.FormsMaps.Init();
+
+			Forms.Init();
+		    FormsMaps.Init();
+		    TKCustomMapRenderer.InitMapRenderer();
+		    NativePlacesApi.Init();
 
 			LoadApplication(new App());
+		    return base.FinishedLaunching(app, options);
 
-			return base.FinishedLaunching(app, options);
+			//LoadApplication(new App());
+
+			//return base.FinishedLaunching(app, options);
 		}
 	}
 }

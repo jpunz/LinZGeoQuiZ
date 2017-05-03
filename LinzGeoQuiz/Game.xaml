@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="LinzGeoQuiz.Game"
-             xmlns:custom="clr-namespace:LinzGeoQuiz.CustomElement;assembly=LinzGeoQuiz">
-	<Grid>
-        <custom:ExtendedMap x:Name="map" MapType="Satellite" Tap="Handle_Tap" />
+             xmlns:custom="clr-namespace:TK.CustomMap;assembly=TK.CustomMap">
+	<Grid x:Name="MainGrid">
 		<ContentView HorizontalOptions="Center" VerticalOptions="Start" WidthRequest="250" BackgroundColor="White" Margin="0,40,0,0" HeightRequest="30">
 			<Label x:Name="LblGeoObjectName" Text="Wienerstraße" FontAttributes="Bold" XAlign="Center" YAlign="Center" />
 		</ContentView>

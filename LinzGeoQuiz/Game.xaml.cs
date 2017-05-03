@@ -6,6 +6,8 @@ using Logic.Database;
 using Logic.Model;
 using Xamarin.Forms.Maps;
 using System.Threading.Tasks;
+using LinzGeoQuiz.ViewModel;
+using TK.CustomMap;
 
 namespace LinzGeoQuiz
 {
@@ -13,23 +15,36 @@ namespace LinzGeoQuiz
 	{
 		private ICollection<GeoObject> geoObjects;
 		private Geocoder geoCoder;
+		private TKCustomMap map;
 
 		public Game()
 		{
 			InitializeComponent();
 
-			//Task.Factory.StartNew(() => { geoObjects = new Firebase().getStreets(); })
-			//    .ContinueWith(_ => { setNewStreet();}, TaskScheduler.FromCurrentSynchronizationContext());
+			map = new TKCustomMap(MapSpan.FromCenterAndRadius(new Position(48.286998, 14.294665), Distance.FromKilometers(5)));
+			map.MapType = MapType.Satellite;
+			map.BindingContext = new MapViewModel();
+			map.SetBinding(TKCustomMap.CustomPinsProperty, "Pins");
+			map.SetBinding(TKCustomMap.MapClickedCommandProperty, "MapClickedCommand");
+
+			MainGrid.Children.Insert(0, map);
+
 			geoObjects = new Firebase().getStreets();
 
 			geoCoder = new Geocoder();
-            setNewStreet();
+		}
+
+		protected override void OnAppearing()
+		{
+			base.OnAppearing();
+
+			setNewStreet();
 		}
 
 		private void setNewStreet()
 		{
+			map.MoveToMapRegion(MapSpan.FromCenterAndRadius(new Position(48.286998, 14.294665), Distance.FromKilometers(5)), true);
 			LblGeoObjectName.Text = System.Linq.Enumerable.ElementAt(geoObjects, new Random().Next(geoObjects.Count - 1)).name;
-			map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(48.286998, 14.294665), Distance.FromKilometers(5)));
 			LblGeoObjectName.TextColor = Color.Black;
 			BtnDone.Source = "Done.png";
 		}
@@ -49,11 +64,11 @@ namespace LinzGeoQuiz
 
 		async void Done_Handle_Clicked(object sender, System.EventArgs e)
 		{
-			if (map.Pins.Count == 1 && LblGeoObjectName.TextColor.Equals(Color.Black))
+			if (((MapViewModel)map.BindingContext).Pins.Count == 1 && LblGeoObjectName.TextColor.Equals(Color.Black))
 			{
 				BtnDone.Source = "Next.png";
 
-				var possibleAddresses = await geoCoder.GetAddressesForPositionAsync(map.Pins[0].Position);
+				var possibleAddresses = await geoCoder.GetAddressesForPositionAsync(((MapViewModel)map.BindingContext).Pins[0].Position);
 
 				foreach (var address in possibleAddresses)
 				{
@@ -70,25 +85,20 @@ namespace LinzGeoQuiz
 				// If we land here, the chosen answer wasn't right
 				var possiblePositions = await geoCoder.GetPositionsForAddressAsync(LblGeoObjectName.Text + ", Linz");
 
-				Pin rightPin = new Pin();
-				rightPin.Label = "Correct location of ";
-				rightPin.Address = LblGeoObjectName.Text;
-
 				foreach (var position in possiblePositions)
 				{
-					rightPin.Position = new Position(position.Latitude, position.Longitude);
-					map.MoveToRegion(MapSpan.FromCenterAndRadius(rightPin.Position, Distance.FromKilometers(5)));
+					((MapViewModel)map.BindingContext).addSolutionPin(position, LblGeoObjectName.Text);
+					map.MoveToMapRegion(MapSpan.FromCenterAndRadius(position, Distance.FromKilometers(5)), true);
+
+					LblGeoObjectName.Text = string.Format("Distance to location: {0:0.00}km", distance(position, ((MapViewModel)map.BindingContext).Pins[0].Position));
+					LblGeoObjectName.TextColor = Color.Red;
+
 					break;
 				}
-
-				map.Pins.Add(rightPin);
-
-				LblGeoObjectName.Text = string.Format("Distance to location: {0:0.00}km", distance(rightPin.Position.Latitude, rightPin.Position.Longitude, map.Pins[0].Position.Latitude, map.Pins[0].Position.Longitude));
-				LblGeoObjectName.TextColor = Color.Red;
 			}
 			else if(!LblGeoObjectName.TextColor.Equals(Color.Black))
 			{
-				map.Pins.Clear();
+				((MapViewModel)map.BindingContext).clearPins();
 
 				setNewStreet();
 			}
@@ -105,8 +115,13 @@ namespace LinzGeoQuiz
 			map.Pins.Add(userPin);
 		}
 
-		private double distance(double lat1, double lon1, double lat2, double lon2)
+		private double distance(Position position1, Position position2)
 		{
+			double lat1 = position1.Latitude;
+			double lon1 = position1.Longitude;
+			double lat2 = position2.Latitude;
+			double lon2 = position2.Longitude;
+
 			double theta = lon1 - lon2;
 			double dist = Math.Sin(deg2rad(lat1)) * Math.Sin(deg2rad(lat2)) + Math.Cos(deg2rad(lat1)) * Math.Cos(deg2rad(lat2)) * Math.Cos(deg2rad(theta));
 			dist = Math.Acos(dist);
