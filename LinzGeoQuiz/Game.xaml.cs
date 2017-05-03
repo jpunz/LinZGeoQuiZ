@@ -49,14 +49,6 @@ namespace LinzGeoQuiz
 			BtnDone.Source = "Done.png";
 		}
 
-		void Handle_Tap(object sender, LinzGeoQuiz.CustomElement.TapEventArgs e)
-		{
-			if (LblGeoObjectName.TextColor.Equals(Color.Black))
-			{
-				PlacePin(e.Position.Longitude, e.Position.Latitude);
-			}
-		}
-
 		async void Cancel_Handle_Clicked(object sender, System.EventArgs e)
 		{
 			await Navigation.PopModalAsync();
