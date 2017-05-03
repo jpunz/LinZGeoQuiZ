@@ -85,7 +85,6 @@
     <Compile Include="ForgotPW.xaml.cs">
       <DependentUpon>ForgotPW.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CustomElement\ExtendedMap.cs" />
     <Compile Include="ViewModel\MapViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -127,7 +126,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CustomElement\" />
     <Folder Include="ViewModel\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
