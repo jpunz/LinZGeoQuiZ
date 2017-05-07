@@ -27,14 +27,17 @@ namespace LinzGeoQuiz.ViewModel
 			{
 				return new Command<Position>(positon =>
 				{
-					var pin = new TKCustomMapPin
-					{
-						Position = positon,
-						DefaultPinColor = Color.Blue
-					};
+                    if (_pins.Count <= 1)
+                    {
+                        var pin = new TKCustomMapPin
+                        {
+                            Position = positon,
+                            DefaultPinColor = Color.Blue
+                        };
 
-					this._pins.Clear();
-					this._pins.Add(pin);
+                        this._pins.Clear();
+                        this._pins.Add(pin);
+                    }
 				});
 			}
 		}

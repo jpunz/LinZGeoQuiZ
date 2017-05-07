@@ -91,17 +91,6 @@ namespace LinzGeoQuiz
 			}
 		}
 
-		public void PlacePin(double longitude, double latitude)
-		{
-			map.Pins.Clear();
-
-			Pin userPin = new Pin();
-			userPin.Position = new Position(latitude, longitude);
-			userPin.Label = "Your guess";
-
-			map.Pins.Add(userPin);
-		}
-
 		private double distance(Position position1, Position position2)
 		{
 			double lat1 = position1.Latitude;
