@@ -17,7 +17,8 @@ Quiz categories in game mode:
 The Android and iOS app is built by using Xamarin (C#). The IDE, which is being used is Xamarin Studio for Mac OSX or Microsoft Visual Studio for Windows.
 For storing all the geographical data and user data, we are using Firebase.
 The map represenatation in the app is depending on the used Device. For iOS it's using Apple Maps and for Android Google Maps. This is realized by using the NuGet-Package [Xamarin.Forms.Maps](https://www.nuget.org/packages/Xamarin.Forms.Maps).
-The geographical data (streets, bus stops,...) was exported from an OSM-File of Linz to a CSV-file using [osmfilter](https://wiki.openstreetmap.org/wiki/Osmfilter) and [osmconvert](https://wiki.openstreetmap.org/wiki/Osmconvert)
+The geographical data (streets, bus stops,...) was exported from an OSM-File of Linz to a CSV-file using [osmfilter](https://wiki.openstreetmap.org/wiki/Osmfilter) and [osmconvert](https://wiki.openstreetmap.org/wiki/Osmconvert). 
+For generating an OSM-File of Linz, [osmosis](https://wiki.openstreetmap.org/wiki/Osmosis) in combination with a .poly-File, which contains the borders of Linz, was applied to an OSM-File of Upper Austria.
 
 Brief description (perhaps bulletpoints) on the used technology stack.
 
