@@ -32,7 +32,7 @@ Brief description (perhaps bulletpoints) on the used technology stack.
 
 * [Project Proposal](documents/proposal.pdf)
 * [UI Sketches](documents/ScreenDesigns.bmpr), [MyBalsamiq](https://www.mybalsamiq.com)
-* [Peer Talk Slides](documents/Peer Talk.pptx)
+* [Peer Talk Slides](documents/Peer_Talk.pptx)
 <!--* [Screen Design](documents/ScreenDesigns.bmpr)-->
 <!--* [Final Project Presentation](documents/final-presentation.pdf)-->
 <!--* Code is living in `src`-->
