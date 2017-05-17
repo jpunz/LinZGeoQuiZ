@@ -6,8 +6,9 @@
 		<Picker HorizontalOptions="FillAndExpand" Title="Select a category">
 			<Picker.Items>
                 <x:String>Streets</x:String> 
-                <x:String>Public Buildings</x:String>
-				<x:String>Retirement Homes</x:String> 
+                <x:String>Nursing Homes</x:String>
+                <x:String>Hospitals</x:String>
+                <x:String>Bus stops</x:String>
                 <x:String>Mixed</x:String>
             </Picker.Items>
 		</Picker>

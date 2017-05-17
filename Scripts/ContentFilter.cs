@@ -29,15 +29,15 @@ namespace Scripts
 
                 //var getResponse = client.Get("streets");
                 FirebaseResponse response = client.Get("streets");
-                IDictionary<int, Street> streets = response.ResultAs<IDictionary<int, Street>>();
+                List<Street> streets = response.ResultAs<List<Street>>();
 
                 Console.WriteLine("Nr. of streets: " + streets.Count);
 
-                foreach(KeyValuePair<int, Street> street in streets)
+                for(int i = 0; i < streets.Count; i++)
                 {
-                    if(string.IsNullOrEmpty(street.Value.is_in) || string.IsNullOrEmpty(street.Value.name) || !street.Value.is_in.ToLower().Contains("linz") || street.Value.is_in.ToLower().Contains("linz-land"))
+                    if(string.IsNullOrEmpty(streets[i].is_in) || string.IsNullOrEmpty(streets[i].name) || !streets[i].is_in.ToLower().Contains("linz") || streets[i].is_in.ToLower().Contains("linz-land"))
                     {
-                        var deleteResponse = client.Delete("streets/" + street.Key);
+                        var deleteResponse = client.Delete("streets/" + i);
                         //Street st = deleteResponse.ResultAs<Street>();
                     }
                 }
