@@ -32,10 +32,9 @@ Brief description (perhaps bulletpoints) on the used technology stack.
 ## Artefacts
 
 * [Project Proposal](documents/proposal.pdf)
-* [UI Sketches](documents/ScreenDesigns.bmpr), [MyBalsamiq](https://www.mybalsamiq.com)
+* [Screen Design](documents/ScreenDesigns.bmpr), [MyBalsamiq](https://www.mybalsamiq.com)
 * [Peer Talk Slides](documents/Peer_Talk.pptx)
-<!--* [Screen Design](documents/ScreenDesigns.bmpr)-->
+<!--* [UI Sketches](documents/ScreenDesigns.bmpr)-->
 <!--* [Final Project Presentation](documents/final-presentation.pdf)-->
 <!--* Code is living in `src`-->
-<!--* [Project Video](https://www.youtube.com/embed/gGOXMWGVwDg)-->
-<!--* [Project Poster](documents/poster.pdf)-->
+<!--* [Project Video](https://www.youtube.com/embed/gGOXMWGVwDg) or [Project Poster](documents/poster.pdf)-->
