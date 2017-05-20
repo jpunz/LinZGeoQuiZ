@@ -14,13 +14,12 @@ namespace LinzGeoQuiz
 
 		void Handle_ValueChanged(object sender, Xamarin.Forms.ValueChangedEventArgs e)
 		{
-
 			LblNrQuestions.Text = ((Stepper)sender).Value.ToString();
 		}
 
 		async void Handle_Clicked(object sender, System.EventArgs e)
 		{
-			await Navigation.PushModalAsync(new Game());
+			await Navigation.PushModalAsync(new Game(Int32.Parse(LblNrQuestions.Text)));
 		}
 	}
 }

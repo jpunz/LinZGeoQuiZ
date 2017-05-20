@@ -16,10 +16,15 @@ namespace LinzGeoQuiz
 		private ICollection<GeoObject> geoObjects;
 		private Geocoder geoCoder;
 		private TKCustomMap map;
+		private int numberOfQuestions;
+		private int curQuestionNr;
 
-		public Game()
+		public Game(int numberOfQuestions)
 		{
 			InitializeComponent();
+
+			this.numberOfQuestions = numberOfQuestions;
+			curQuestionNr = 0;
 
 			map = new TKCustomMap(MapSpan.FromCenterAndRadius(new Position(48.286998, 14.294665), Distance.FromKilometers(5)));
 			map.MapType = MapType.Satellite;
@@ -41,6 +46,7 @@ namespace LinzGeoQuiz
 			LblGeoObjectName.Text = System.Linq.Enumerable.ElementAt(geoObjects, new Random().Next(geoObjects.Count - 1)).name;
 			LblGeoObjectName.TextColor = Color.Black;
 			BtnDone.Source = "Done.png";
+			curQuestionNr++;
 		}
 
 		async void Cancel_Handle_Clicked(object sender, System.EventArgs e)
@@ -84,10 +90,18 @@ namespace LinzGeoQuiz
 			}
 			else if(!LblGeoObjectName.TextColor.Equals(Color.Black))
 			{
-				((MapViewModel)map.BindingContext).clearPins();
+				// check if we reached question limit
+				if (curQuestionNr < numberOfQuestions)
+				{
+					((MapViewModel)map.BindingContext).clearPins();
 
-                map.MoveToMapRegion(MapSpan.FromCenterAndRadius(new Position(48.286998, 14.294665), Distance.FromKilometers(5)), true);
-                setNewStreet();
+					map.MoveToMapRegion(MapSpan.FromCenterAndRadius(new Position(48.286998, 14.294665), Distance.FromKilometers(5)), true);
+					setNewStreet();
+				}
+				else
+				{
+					await Navigation.PopModalAsync();
+				}
 			}
 		}
 
