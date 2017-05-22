@@ -23,6 +23,12 @@ namespace LinzGeoQuiz.iOS
 		    TKCustomMapRenderer.InitMapRenderer();
 		    NativePlacesApi.Init();
 
+			Xamarin.Auth.Presenters.OAuthLoginPresenter.PlatformLogin = (authenticator) =>
+			{
+				var oAuthLogin = new OAuthLoginPresenter();
+				oAuthLogin.Login(authenticator);
+			};
+
 			LoadApplication(new App());
 		    return base.FinishedLaunching(app, options);
 
