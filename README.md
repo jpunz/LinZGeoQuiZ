@@ -1,4 +1,4 @@
-# LinZ Geo QuiZ <img src="documents/AppIcon_transparent.png" width="50"/>
+# <img src="documents/AppIcon_transparent.png" width="40"/> LinZ Geo QuiZ
 
 This is a cross-platform application for iOS and Android made in Xamarin (Xamarin Studio / Visual Studio).
 The app is a quiz about the geographical location of streets, bus stops, hospitals and nursing homes in Linz (Austria). It should help to improve the geographical knowledge about Linz for e.g. rescuers (fire brigade, police, ambulance), taxi drivers and so on and can also be used for training purposes.
