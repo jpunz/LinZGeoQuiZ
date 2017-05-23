@@ -13,14 +13,15 @@ namespace LinzGeoQuiz
 {
 	public partial class Game : ContentPage
 	{
-		private ICollection<GeoObject> geoObjects;
+		private List<KeyValuePair<String, GeoObject>> geoObjects;
 		private Geocoder geoCoder;
 		private TKCustomMap map;
 		private int numberOfQuestions;
 		private int curQuestionNr;
 		private double sumDistance = 0.0;
+        private KeyValuePair<string, GeoObject> randomObject;
 
-		public Game(int numberOfQuestions)
+		public Game(int numberOfQuestions, String category)
 		{
 			InitializeComponent();
 
@@ -35,16 +36,17 @@ namespace LinzGeoQuiz
 
 			MainGrid.Children.Insert(0, map);
 
-			geoObjects = new Firebase().getStreets();
+            geoObjects = new Firebase().getGeoObjects(category);
 
-			geoCoder = new Geocoder();
+            geoCoder = new Geocoder();
 
             setNewStreet();
         }
 
 		private void setNewStreet()
 		{
-			LblGeoObjectName.Text = System.Linq.Enumerable.ElementAt(geoObjects, new Random().Next(geoObjects.Count - 1)).name;
+            randomObject = System.Linq.Enumerable.ElementAt(geoObjects, new Random().Next(geoObjects.Count - 1));
+            LblGeoObjectName.Text = randomObject.Value.name;
 			LblGeoObjectName.TextColor = Color.Black;
 			BtnDone.Source = "Done.png";
 			curQuestionNr++;
@@ -61,35 +63,59 @@ namespace LinzGeoQuiz
 			{
 				BtnDone.Source = "Next.png";
 
-				var possibleAddresses = await geoCoder.GetAddressesForPositionAsync(((MapViewModel)map.BindingContext).Pins[0].Position);
+                if (randomObject.Key.Equals("streets"))
+                {
+                    var possibleAddresses = await geoCoder.GetAddressesForPositionAsync(((MapViewModel)map.BindingContext).Pins[0].Position);
 
-				foreach (var address in possibleAddresses)
-				{
-					if (address.Contains(LblGeoObjectName.Text))
-					{
-						// Correct
-						LblGeoObjectName.Text = "Correct!";
-						LblGeoObjectName.TextColor = Color.Green;
+                    foreach (var address in possibleAddresses)
+                    {
+                        if (address.Contains(LblGeoObjectName.Text))
+                        {
+                            // Correct
+                            LblGeoObjectName.Text = "Correct!";
+                            LblGeoObjectName.TextColor = Color.Green;
 
-						return;
-					}
-				}
+                            return;
+                        }
+                    }
 
-				// If we land here, the chosen answer wasn't right
-				var possiblePositions = await geoCoder.GetPositionsForAddressAsync(LblGeoObjectName.Text + ", Linz");
+                    // If we land here, the chosen answer wasn't right
+                    var possiblePositions = await geoCoder.GetPositionsForAddressAsync(LblGeoObjectName.Text + ", Linz");
 
-				foreach (var position in possiblePositions)
-				{
-					((MapViewModel)map.BindingContext).addSolutionPin(position, LblGeoObjectName.Text);
-					map.MoveToMapRegion(MapSpan.FromCenterAndRadius(position, Distance.FromKilometers(5)), true);
+                    foreach (var position in possiblePositions)
+                    {
+                        ((MapViewModel)map.BindingContext).addSolutionPin(position, LblGeoObjectName.Text);
+                        map.MoveToMapRegion(MapSpan.FromCenterAndRadius(position, Distance.FromKilometers(5)), true);
 
-					var currentDistance = distance(position, ((MapViewModel)map.BindingContext).Pins[0].Position);
-					sumDistance += currentDistance;
-					LblGeoObjectName.Text = string.Format("Distance to location: {0:0.00}km", currentDistance);
-					LblGeoObjectName.TextColor = Color.Red;
+						var currentDistance = distance(position, ((MapViewModel)map.BindingContext).Pins[0].Position);
+						sumDistance += currentDistance;
+						LblGeoObjectName.Text = string.Format("Distance to location: {0:0.00}km", currentDistance);
+                        LblGeoObjectName.TextColor = Color.Red;
 
-					break;
-				}
+                        break;
+                    }
+                }
+                else // Other categories
+                {
+                    Position correctPosition = new Position(randomObject.Value.latitude, randomObject.Value.longitude);
+
+                    ((MapViewModel)map.BindingContext).addSolutionPin(correctPosition, LblGeoObjectName.Text);
+                    map.MoveToMapRegion(MapSpan.FromCenterAndRadius(new Position(randomObject.Value.latitude, randomObject.Value.longitude), Distance.FromKilometers(5)), true);
+
+                    var dist = distance(correctPosition, ((MapViewModel)map.BindingContext).Pins[0].Position);
+
+                    if(dist < 0.01)
+                    {
+                        // Correct
+                        LblGeoObjectName.Text = "Correct!";
+                        LblGeoObjectName.TextColor = Color.Green;
+                    }
+                    else
+                    {
+                        LblGeoObjectName.Text = string.Format("Distance to location: {0:0.00}km", dist);
+                        LblGeoObjectName.TextColor = Color.Red;
+                    }
+                }
 			}
 			else if(!LblGeoObjectName.TextColor.Equals(Color.Black))
 			{

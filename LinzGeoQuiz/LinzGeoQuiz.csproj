@@ -116,9 +116,6 @@
     <Reference Include="TK.CustomMap">
       <HintPath>..\packages\TK.CustomMap.1.5.1\lib\portable-net45+win8+wpa81+wp8\TK.CustomMap.dll</HintPath>
     </Reference>
-    <Reference Include="Quirco.SimpleStorage">
-      <HintPath>..\packages\Quirco.SimpleStorage.1.0.7-pre1\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Quirco.SimpleStorage.dll</HintPath>
-    </Reference>
     <Reference Include="PInvoke.Windows.Core">
       <HintPath>..\packages\PInvoke.Windows.Core.0.3.2\lib\portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10\PInvoke.Windows.Core.dll</HintPath>
     </Reference>

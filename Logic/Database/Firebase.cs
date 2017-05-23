@@ -1,6 +1,7 @@
 ﻿using FireSharp;
 using FireSharp.Config;
 using FireSharp.Interfaces;
+using FireSharp.Response;
 using Logic.Model;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ namespace Logic.Database
     {
         private const string AUTHSECRET = "tqbbj0jnqp04G3LfRzptLBL82pSvBDW374GeXJEl";
         private const string URL = "https://linzgeoquiz.firebaseio.com";
+        //private readonly string[] CATEGORIES = { "busstops", "nursinghomes", "streets", "hospitals" };
 
         private IFirebaseClient client;
 
@@ -22,16 +24,43 @@ namespace Logic.Database
             IFirebaseConfig config = new FirebaseConfig
             {
                 AuthSecret = AUTHSECRET,
-                BasePath = URL
-
+                BasePath = URL,
             };
 
             client = new FirebaseClient(config);
         }
 
-        public ICollection<GeoObject> getStreets()
+        public List<KeyValuePair<String, GeoObject>> getGeoObjects(String category)
         {
-            return client.Get("streets").ResultAs<IDictionary<int, GeoObject>>().Values;
+            List<KeyValuePair<String, GeoObject>> objects = new List<KeyValuePair<String, GeoObject>>();
+
+            if (category.Equals("mixed"))
+            {
+                /*foreach(string cat in CATEGORIES)
+                {
+                    objects.AddRange(getGeoObjects(cat));
+                }*/
+
+                // Get all categories
+                var geoObjects = client.Get("").ResultAs<IDictionary<String, ICollection<GeoObject>>>();
+
+                foreach (String key in geoObjects.Keys)
+                {
+                    foreach(GeoObject geoObject in geoObjects[key])
+                    {
+                        objects.Add(new KeyValuePair<String, GeoObject>(key, geoObject));
+                    }
+                }
+            }
+            else
+            {
+                foreach (GeoObject geoObject in client.Get(category).ResultAs<ICollection<GeoObject>>())
+                {
+                    objects.Add(new KeyValuePair<String, GeoObject>(category, geoObject));
+                }
+            }
+
+            return objects;
         }
     }
 }

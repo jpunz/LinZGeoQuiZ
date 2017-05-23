@@ -13,7 +13,7 @@ namespace Scripts
 {
     class ContentFilter
     {
-        static void Main(string[] args)
+        public static void execute()
         {
             try
             {
@@ -29,23 +29,22 @@ namespace Scripts
 
                 //var getResponse = client.Get("streets");
                 FirebaseResponse response = client.Get("streets");
-                List<Street> streets = response.ResultAs<List<Street>>();
+                IDictionary<int, Street> streets = response.ResultAs<IDictionary<int, Street>>();
 
                 Console.WriteLine("Nr. of streets: " + streets.Count);
 
-                for(int i = 0; i < streets.Count; i++)
+                foreach(int i in streets.Keys)
                 {
-                    if(string.IsNullOrEmpty(streets[i].is_in) || string.IsNullOrEmpty(streets[i].name) || !streets[i].is_in.ToLower().Contains("linz") || streets[i].is_in.ToLower().Contains("linz-land"))
+                    if(streets[i] == null || string.IsNullOrEmpty(streets[i].is_in) || string.IsNullOrEmpty(streets[i].name) || !streets[i].is_in.ToLower().Contains("linz") || streets[i].is_in.ToLower().Contains("linz-land"))
                     {
                         var deleteResponse = client.Delete("streets/" + i);
-                        //Street st = deleteResponse.ResultAs<Street>();
                     }
                 }
             }
             catch(FirebaseException ex)
             {
                 Console.WriteLine(ex.ToString());
-                Main(null);
+                ContentFilter.execute();
             }
         }
     }

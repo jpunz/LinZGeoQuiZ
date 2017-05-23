@@ -3,14 +3,15 @@
 	<StackLayout Margin="20,50,20,30">
 		<Label XAlign="Center" Text="Game Settings" FontAttributes="Bold" FontSize="30" />
 		<Label Text="Category:" Margin="0,20,0,0" />
-		<Picker HorizontalOptions="FillAndExpand" Title="Select a category">
-			<Picker.Items>
+		<Picker HorizontalOptions="FillAndExpand" Title="Select a category" x:Name="PiCategory">
+            <Picker.Items>
+                <x:String>Mixed</x:String>
                 <x:String>Streets</x:String> 
                 <x:String>Nursing Homes</x:String>
                 <x:String>Hospitals</x:String>
                 <x:String>Bus stops</x:String>
-                <x:String>Mixed</x:String>
             </Picker.Items>
+            <Picker.SelectedIndex>0</Picker.SelectedIndex>
 		</Picker>
 		<StackLayout Orientation="Horizontal" Margin="0,20,0,0">
 			<Label Text="Number of questions:" YAlign="Center" /><Label x:Name="LblNrQuestions" Text="20" YAlign="Center" WidthRequest="50"/>
