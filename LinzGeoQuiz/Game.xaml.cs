@@ -18,6 +18,7 @@ namespace LinzGeoQuiz
 		private TKCustomMap map;
 		private int numberOfQuestions;
 		private int curQuestionNr;
+		private double sumDistance = 0.0;
 
 		public Game(int numberOfQuestions)
 		{
@@ -82,7 +83,9 @@ namespace LinzGeoQuiz
 					((MapViewModel)map.BindingContext).addSolutionPin(position, LblGeoObjectName.Text);
 					map.MoveToMapRegion(MapSpan.FromCenterAndRadius(position, Distance.FromKilometers(5)), true);
 
-					LblGeoObjectName.Text = string.Format("Distance to location: {0:0.00}km", distance(position, ((MapViewModel)map.BindingContext).Pins[0].Position));
+					var currentDistance = distance(position, ((MapViewModel)map.BindingContext).Pins[0].Position);
+					sumDistance += currentDistance;
+					LblGeoObjectName.Text = string.Format("Distance to location: {0:0.00}km", currentDistance);
 					LblGeoObjectName.TextColor = Color.Red;
 
 					break;
@@ -100,6 +103,7 @@ namespace LinzGeoQuiz
 				}
 				else
 				{
+					saveStatistics();
 					await Navigation.PopModalAsync();
 				}
 			}
@@ -130,6 +134,20 @@ namespace LinzGeoQuiz
 		private double rad2deg(double rad)
 		{
 			return (rad / Math.PI * 180.0);
+		}
+
+		protected override void OnAppearing()
+		{
+			base.OnAppearing();
+
+			sumDistance = App.sumDistance;
+		}
+
+		private void saveStatistics()
+		{
+			App.sumDistance = sumDistance;
+			App.sumQuestions += numberOfQuestions;
+			App.sumGames++;
 		}
 	}
 }

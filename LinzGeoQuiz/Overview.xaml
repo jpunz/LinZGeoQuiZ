@@ -5,9 +5,8 @@
 			<Label XAlign="Center" Text="Overview" FontAttributes="Bold" FontSize="30" Margin="0,50,0,0"/>
 
 			<Label XAlign="Center" Text="User: test@mail.com" Margin="0,20,0,0"/>
-			<Label XAlign="Center" Text="Avg. Deviation: 12.2km" />
-			<Label XAlign="Center" Text="Avg. Correctness: 67%" />
-			<Label XAlign="Center" Text="Games: 17" />
+			<Label x:Name="LblAvgDeviation" XAlign="Center" Text="Avg. Deviation: -" />
+			<Label x:Name="LblGameCount" XAlign="Center" Text="Games: 0" />
 	    </StackLayout>
 	</ContentPage.Content>
 </ContentPage>
