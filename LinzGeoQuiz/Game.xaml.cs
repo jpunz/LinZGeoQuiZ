@@ -150,7 +150,7 @@ namespace LinzGeoQuiz
                     }
                 }
 			}
-			else if(!LblGeoObjectName.TextColor.Equals(Color.Black))
+			else if (!LblGeoObjectName.TextColor.Equals(Color.Black))
 			{
 				// check if we reached question limit
 				if (curQuestionNr < numberOfQuestions)
