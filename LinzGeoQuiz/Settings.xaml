@@ -4,8 +4,8 @@
 
 	<StackLayout Spacing="10" x:Name="layout">
 		<Label XAlign="Center" Text="Settings" FontAttributes="Bold" FontSize="30" Margin="0,50,0,0"/>
-		<Button Text="Login" Clicked="Login_Clicked" />
-		<Button Text="Logout" />
+		<Button Text="Login FB" Clicked="Login_Clicked" />
+		<Button Text="Test FP API" Clicked="Logout_Clicked" />
     </StackLayout>
 
 	</ContentPage.Content>
