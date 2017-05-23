@@ -6,6 +6,7 @@
 
 			<Label XAlign="Center" Text="User: test@mail.com" Margin="0,20,0,0"/>
 			<Label x:Name="LblAvgDeviation" XAlign="Center" Text="Avg. Deviation: -" />
+			<Label x:Name="LblQuestionCount" XAlign="Center" Text="Questions: 0" />
 			<Label x:Name="LblGameCount" XAlign="Center" Text="Games: 0" />
 	    </StackLayout>
 	</ContentPage.Content>
