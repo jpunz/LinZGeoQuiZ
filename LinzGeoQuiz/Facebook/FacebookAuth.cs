@@ -8,6 +8,7 @@ namespace LinzGeoQuiz
 {
 	class FacebookAuth
 	{
+		private static bool isAuthenticated = false;
 
 		public static void authenticateFacebook(INavigation navigation)
 		{
@@ -26,14 +27,22 @@ namespace LinzGeoQuiz
 
 					// TODO remove if finished
 					Debug.WriteLine(eventArgs.Account.Properties["access_token"]);
+
+					isAuthenticated = true;
 				}
 				else
 				{
 					// Login canceled
 					Debug.WriteLine("Authentication failed.");
+					isAuthenticated = false;
 				}
 			};
 			presenter.Login(auth);
+		}
+
+		public static bool isFBAuthenticated()
+		{
+			return isAuthenticated;
 		}
 	}
 }
