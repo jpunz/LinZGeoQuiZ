@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="LinzGeoQuiz.Game"
              xmlns:custom="clr-namespace:TK.CustomMap;assembly=TK.CustomMap">
 	<Grid x:Name="MainGrid">
-		<ContentView HorizontalOptions="Center" VerticalOptions="Start" WidthRequest="250" BackgroundColor="White" Margin="0,40,0,0" HeightRequest="30">
+		<ContentView HorizontalOptions="Center" VerticalOptions="Start" WidthRequest="250" BackgroundColor="White" Margin="0,40,0,0" HeightRequest="40">
 			<Label x:Name="LblGeoObjectName" Text="Wienerstraße" FontAttributes="Bold" XAlign="Center" YAlign="Center" />
 		</ContentView>
 		<Image x:Name="BtnDone" Source="Done.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="End" Margin="0,0,0,40" >
