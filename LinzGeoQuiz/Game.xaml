@@ -15,6 +15,9 @@
 		        <TapGestureRecognizer Tapped="Cancel_Handle_Clicked"/>
   			</Image.GestureRecognizers>
 		</Image>
+		<ContentView x:Name="contentViewRemainingTime" HorizontalOptions="End" VerticalOptions="End" WidthRequest="40" BackgroundColor="White" Margin="0,0,0,0" HeightRequest="30">
+			<Label x:Name="LblRemainingTime" Text="30" FontAttributes="Bold" XAlign="Center" YAlign="Center" />
+		</ContentView>
 	</Grid>
 	 
 </ContentPage>

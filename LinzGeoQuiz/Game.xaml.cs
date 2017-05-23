@@ -20,8 +20,9 @@ namespace LinzGeoQuiz
 		private int curQuestionNr;
 		private double sumDistance = 0.0;
         private KeyValuePair<string, GeoObject> randomObject;
+		private bool pauseTimer = false;
 
-		public Game(int numberOfQuestions, String category)
+		public Game(int numberOfQuestions, String category, bool isTimeGame)
 		{
 			InitializeComponent();
 
@@ -36,11 +37,39 @@ namespace LinzGeoQuiz
 
 			MainGrid.Children.Insert(0, map);
 
+			contentViewRemainingTime.IsVisible = isTimeGame;
+
             geoObjects = new Firebase().getGeoObjects(category);
 
             geoCoder = new Geocoder();
 
             setNewStreet();
+
+			if (isTimeGame)
+			{
+				Device.StartTimer(TimeSpan.FromSeconds(1), () =>
+		        {
+					if (!pauseTimer)
+					{
+						int remainingTime = int.Parse(LblRemainingTime.Text);
+						if (remainingTime > 0)
+						{
+							LblRemainingTime.Text = "" + (remainingTime - 1);
+						}
+						else
+						{
+							BtnDone.Source = "Next.png";
+
+							var currentDistance = 10;
+							sumDistance += currentDistance;
+							LblGeoObjectName.Text = string.Format("Distance to location: {0:0.00}km", currentDistance);
+							LblGeoObjectName.TextColor = Color.Red;
+						}
+					}
+
+					return true;
+		        });
+			}
         }
 
 		private void setNewStreet()
@@ -50,6 +79,9 @@ namespace LinzGeoQuiz
 			LblGeoObjectName.TextColor = Color.Black;
 			BtnDone.Source = "Done.png";
 			curQuestionNr++;
+
+			LblRemainingTime.Text = "30";
+			pauseTimer = false;
 		}
 
 		async void Cancel_Handle_Clicked(object sender, System.EventArgs e)
@@ -62,6 +94,7 @@ namespace LinzGeoQuiz
 			if (((MapViewModel)map.BindingContext).Pins.Count == 1 && LblGeoObjectName.TextColor.Equals(Color.Black))
 			{
 				BtnDone.Source = "Next.png";
+				pauseTimer = true;
 
                 if (randomObject.Key.Equals("streets"))
                 {

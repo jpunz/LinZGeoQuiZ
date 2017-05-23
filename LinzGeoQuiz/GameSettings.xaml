@@ -19,7 +19,7 @@
 		</StackLayout>
 		<StackLayout Orientation="Horizontal" Margin="0,20,0,0">
 			<Label Text="Time game:" YAlign="Center" />
-			<Switch IsToggled="false" />
+			<Switch x:Name="switchTimeGame" IsToggled="false" />
 		</StackLayout>
 		<Button Text="Start" WidthRequest="100" HorizontalOptions="Center" VerticalOptions="EndAndExpand" BorderColor="Gray" BorderWidth="1" Clicked="Handle_Clicked" />
 	</StackLayout>

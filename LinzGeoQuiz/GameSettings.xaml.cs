@@ -19,7 +19,7 @@ namespace LinzGeoQuiz
 
 		async void Handle_Clicked(object sender, System.EventArgs e)
 		{
-			await Navigation.PushModalAsync(new Game(Int32.Parse(LblNrQuestions.Text), ((String)PiCategory.SelectedItem).ToLower().Replace(" ", "")));
+			await Navigation.PushModalAsync(new Game(Int32.Parse(LblNrQuestions.Text), ((String)PiCategory.SelectedItem).ToLower().Replace(" ", ""), switchTimeGame.IsToggled));
 		}
 	}
 }
