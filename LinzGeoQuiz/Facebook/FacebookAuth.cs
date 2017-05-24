@@ -43,6 +43,8 @@ namespace LinzGeoQuiz
 		public static void logout()
 		{
 			FacebookAPI.deleteAccessToken();
+			isAuthenticated = false;
+			Application.Current.Properties["Account"] = null;
 		}
 
 		public static bool isFBAuthenticated()
