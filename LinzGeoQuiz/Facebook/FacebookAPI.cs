@@ -17,6 +17,11 @@ namespace LinzGeoQuiz
 			return makeRequest("POST", FB_API + "me?fields=id,name,email", null);
 		}
 
+		public static Task<String> deleteAccessToken()
+		{
+			return makeRequest("DELETE", FB_API + "me/permissions", null);
+		}
+
 		public static Task<String> createPost(string message)
 		{
 			IDictionary<string, string> body = new Dictionary<string, string>();

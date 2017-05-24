@@ -40,6 +40,11 @@ namespace LinzGeoQuiz
 			presenter.Login(auth);
 		}
 
+		public static void logout()
+		{
+			FacebookAPI.deleteAccessToken();
+		}
+
 		public static bool isFBAuthenticated()
 		{
 			return isAuthenticated;
