@@ -15,7 +15,7 @@ namespace Logic.Database
     {
         private const string AUTHSECRET = "tqbbj0jnqp04G3LfRzptLBL82pSvBDW374GeXJEl";
         private const string URL = "https://linzgeoquiz.firebaseio.com";
-        //private readonly string[] CATEGORIES = { "busstops", "nursinghomes", "streets", "hospitals" };
+        private readonly string[] CATEGORIES = { "busstops", "nursinghomes", "streets", "hospitals" };
 
         private IFirebaseClient client;
 
@@ -36,13 +36,13 @@ namespace Logic.Database
 
             if (category.Equals("mixed"))
             {
-                /*foreach(string cat in CATEGORIES)
+                foreach(string cat in CATEGORIES)
                 {
                     objects.AddRange(getGeoObjects(cat));
-                }*/
+                }
 
                 // Get all categories
-                var geoObjects = client.Get("").ResultAs<IDictionary<String, ICollection<GeoObject>>>();
+                /*var geoObjects = client.Get("").ResultAs<IDictionary<String, ICollection<GeoObject>>>();
 
                 foreach (String key in geoObjects.Keys)
                 {
@@ -50,7 +50,7 @@ namespace Logic.Database
                     {
                         objects.Add(new KeyValuePair<String, GeoObject>(key, geoObject));
                     }
-                }
+                }*/
             }
             else
             {
