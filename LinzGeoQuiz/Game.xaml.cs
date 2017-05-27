@@ -144,6 +144,7 @@ namespace LinzGeoQuiz
                     map.MoveToMapRegion(MapSpan.FromCenterAndRadius(new Position(randomObject.Value.latitude, randomObject.Value.longitude), Distance.FromKilometers(5)), true);
 
                     var dist = distance(correctPosition, ((MapViewModel)map.BindingContext).Pins[0].Position);
+					sumDistance += dist;
 
                     if(dist < 0.01)
                     {
