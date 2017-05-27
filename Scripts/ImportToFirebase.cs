@@ -28,7 +28,7 @@ namespace Scripts
 
             IFirebaseClient client = new FirebaseClient(config);
 
-            client.Set("", content);
+            client.Set("geoobjects", content);
         }
     }
 }

@@ -10,7 +10,7 @@ namespace Scripts
     {
         static void Main(string[] args)
         {
-            //ImportToFirebase.execute(); // Import to firebase from Linz.json
+            ImportToFirebase.execute(); // Import to firebase from Linz.json
             //ContentFilter.execute(); // Filtering empty street-names and streets outside of Linz
         }
     }

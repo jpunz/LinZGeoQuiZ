@@ -42,7 +42,7 @@ namespace Logic.Database
                 }*/
 
                 // Get all categories
-                var geoObjects = client.Get("").ResultAs<IDictionary<String, ICollection<GeoObject>>>();
+                var geoObjects = client.Get("geoobjects").ResultAs<IDictionary<String, ICollection<GeoObject>>>();
 
                 foreach (String key in geoObjects.Keys)
                 {
@@ -54,7 +54,7 @@ namespace Logic.Database
             }
             else
             {
-                foreach (GeoObject geoObject in client.Get(category).ResultAs<ICollection<GeoObject>>())
+                foreach (GeoObject geoObject in client.Get("geoobjects/" + category).ResultAs<ICollection<GeoObject>>())
                 {
                     objects.Add(new KeyValuePair<String, GeoObject>(category, geoObject));
                 }
