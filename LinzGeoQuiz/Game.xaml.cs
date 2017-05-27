@@ -162,7 +162,7 @@ namespace LinzGeoQuiz
 				}
 				else
 				{
-					saveStatistics();
+					await saveStatistics();
 
 					await Navigation.PushModalAsync(new GameResult(sumDistance / numberOfQuestions));
 				}
@@ -196,11 +196,14 @@ namespace LinzGeoQuiz
 			return (rad / Math.PI * 180.0);
 		}
 
-		private void saveStatistics()
+		private Task saveStatistics()
 		{
 			App.sumDistance += sumDistance;
 			App.sumQuestions += numberOfQuestions;
 			App.sumGames++;
+
+			App.getInstance().updateScore();
+			return App.getInstance().SavePropertiesAsync();
 		}
 	}
 }

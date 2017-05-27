@@ -62,5 +62,26 @@ namespace Logic.Database
 
             return objects;
         }
+
+		public List<KeyValuePair<String, HighscoreEntry>> getHighscoreEntries()
+		{
+			var tempHighscoreEntries = client.Get("highscore").ResultAs<IDictionary<String, HighscoreEntry>>();
+
+			List<KeyValuePair<String, HighscoreEntry>> highscoreEntries = new List<KeyValuePair<String, HighscoreEntry>>();
+			if (tempHighscoreEntries != null)
+			{
+				foreach (string key in tempHighscoreEntries.Keys)
+				{
+					highscoreEntries.Add(new KeyValuePair<String, HighscoreEntry>(key, tempHighscoreEntries[key]));
+				}
+			}
+
+			return highscoreEntries;
+		}
+
+		public void updateScore(string id, HighscoreEntry e)
+		{
+			client.Set("highscore/" + id, e);
+		}
     }
 }

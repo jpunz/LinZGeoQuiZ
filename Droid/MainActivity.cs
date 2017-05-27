@@ -29,7 +29,7 @@ namespace LinzGeoQuiz.Droid
 				oAuthLogin.Login(authenticator);
             };
 
-			LoadApplication(new App());
+			LoadApplication(App.getInstance());
 		}
 	}
 }

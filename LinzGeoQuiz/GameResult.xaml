@@ -4,8 +4,8 @@
 		<StackLayout Spacing="10" x:Name="layout">
 			<Label XAlign="Center" Text="Game ended" FontAttributes="Bold" FontSize="30" Margin="0,50,0,0" />
 			<Label x:Name="LblAvgDeviation" Text="Avg. Deviation: -" XAlign="Center" Margin="0,20,0,0" />
-			<Button Text="Close" WidthRequest="150" HorizontalOptions="Center" VerticalOptions="EndAndExpand" BorderColor="Gray" BorderWidth="1" Clicked="Close_Handle_Clicked" Margin="20,20,20,20" />
 			<Button Text="Share" WidthRequest="150" HorizontalOptions="Center" VerticalOptions="EndAndExpand" BorderColor="Gray" BorderWidth="1" Clicked="Share_Handle_Clicked" Margin="20,20,20,20" />
+			<Button Text="Close" WidthRequest="150" HorizontalOptions="Center" VerticalOptions="EndAndExpand" BorderColor="Gray" BorderWidth="1" Clicked="Close_Handle_Clicked" Margin="20,20,20,20" />
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>
