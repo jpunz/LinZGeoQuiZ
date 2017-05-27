@@ -17,6 +17,8 @@ namespace LinzGeoQuiz
 		private Geocoder geoCoder;
 		private TKCustomMap map;
 		private int numberOfQuestions;
+		private String category;
+		private bool isTimeGame;
 		private int curQuestionNr;
 		private double sumDistance = 0.0;
         private KeyValuePair<string, GeoObject> randomObject;
@@ -27,6 +29,8 @@ namespace LinzGeoQuiz
 			InitializeComponent();
 
 			this.numberOfQuestions = numberOfQuestions;
+			this.category = category;
+			this.isTimeGame = isTimeGame;
 			curQuestionNr = 0;
 
 			map = new TKCustomMap(MapSpan.FromCenterAndRadius(new Position(48.286998, 14.294665), Distance.FromKilometers(5)));
@@ -38,17 +42,19 @@ namespace LinzGeoQuiz
 			MainGrid.Children.Insert(0, map);
 
 			contentViewRemainingTime.IsVisible = isTimeGame;
+        }
 
+		protected override void OnAppearing() // TODO don't block UI-thread
+		{
             geoObjects = new Firebase().getGeoObjects(category);
+			geoCoder = new Geocoder();
 
-            geoCoder = new Geocoder();
-
-            setNewStreet();
+			setNewStreet();
 
 			if (isTimeGame)
 			{
 				Device.StartTimer(TimeSpan.FromSeconds(1), () =>
-		        {
+				{
 					if (!pauseTimer)
 					{
 						int remainingTime = int.Parse(LblRemainingTime.Text);
@@ -68,9 +74,11 @@ namespace LinzGeoQuiz
 					}
 
 					return true;
-		        });
+				});
 			}
-        }
+
+			contentViewLoading.IsVisible = false;
+		}
 
 		private void setNewStreet()
 		{
