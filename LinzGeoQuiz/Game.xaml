@@ -18,6 +18,11 @@
 		<ContentView x:Name="contentViewRemainingTime" HorizontalOptions="End" VerticalOptions="End" WidthRequest="40" BackgroundColor="White" Margin="0,0,0,0" HeightRequest="30">
 			<Label x:Name="LblRemainingTime" Text="30" FontAttributes="Bold" XAlign="Center" YAlign="Center" />
 		</ContentView>
+		<ContentView x:Name="contentViewLoading" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Gray" Opacity="0.8">
+			<ActivityIndicator IsRunning="true" Color="Black" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+				RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.33}"
+				RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.28}" />
+		</ContentView>
 	</Grid>
 	 
 </ContentPage>
