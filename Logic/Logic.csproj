@@ -39,6 +39,7 @@
     <Compile Include="Database\Firebase.cs" />
     <Compile Include="Model\GeoObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Model\HighscoreEntry.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

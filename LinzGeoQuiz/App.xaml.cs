@@ -4,10 +4,9 @@ namespace LinzGeoQuiz
 {
 	public partial class App : Application
 	{
-		public static double sumDistance;
-		public static int sumQuestions, sumGames;
+		private static App instance;
 
-		public App()
+		private App()
 		{
 			InitializeComponent();
 
@@ -18,22 +17,23 @@ namespace LinzGeoQuiz
 			App.sumGames = Properties.ContainsKey("sumGames") ? (int)Properties["sumGames"] : 0;
 		}
 
-		protected override void OnStart()
+		public static App getInstance()
 		{
-			// Handle when your app starts
+			if (instance == null)
+			{
+				instance = new App();
+			}
+			return instance;
 		}
 
-		protected override void OnSleep()
+		public static double sumDistance;
+		public static int sumQuestions, sumGames;
+
+		public void updateScore()
 		{
-			// Handle when your app sleeps
 			Properties["sumDistance"] = sumDistance;
 			Properties["sumQuestions"] = sumQuestions;
 			Properties["sumGames"] = sumGames;
-		}
-
-		protected override void OnResume()
-		{
-			// Handle when your app resumes
 		}
 	}
 }

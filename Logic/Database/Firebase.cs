@@ -15,7 +15,7 @@ namespace Logic.Database
     {
         private const string AUTHSECRET = "tqbbj0jnqp04G3LfRzptLBL82pSvBDW374GeXJEl";
         private const string URL = "https://linzgeoquiz.firebaseio.com";
-        //private readonly string[] CATEGORIES = { "busstops", "nursinghomes", "streets", "hospitals" };
+        private readonly string[] CATEGORIES = { "busstops", "nursinghomes", "streets", "hospitals" };
 
         private IFirebaseClient client;
 
@@ -36,17 +36,12 @@ namespace Logic.Database
 
             if (category.Equals("mixed"))
             {
-                /*foreach(string cat in CATEGORIES)
-                {
-                    objects.AddRange(getGeoObjects(cat));
-                }*/
-
                 // Get all categories
                 var geoObjects = client.Get("geoobjects").ResultAs<IDictionary<String, ICollection<GeoObject>>>();
 
                 foreach (String key in geoObjects.Keys)
                 {
-                    foreach(GeoObject geoObject in geoObjects[key])
+                    foreach (GeoObject geoObject in geoObjects[key])
                     {
                         objects.Add(new KeyValuePair<String, GeoObject>(key, geoObject));
                     }
@@ -62,5 +57,26 @@ namespace Logic.Database
 
             return objects;
         }
+
+		public List<KeyValuePair<String, HighscoreEntry>> getHighscoreEntries()
+		{
+			var tempHighscoreEntries = client.Get("highscore").ResultAs<IDictionary<String, HighscoreEntry>>();
+
+			List<KeyValuePair<String, HighscoreEntry>> highscoreEntries = new List<KeyValuePair<String, HighscoreEntry>>();
+			if (tempHighscoreEntries != null)
+			{
+				foreach (string key in tempHighscoreEntries.Keys)
+				{
+					highscoreEntries.Add(new KeyValuePair<String, HighscoreEntry>(key, tempHighscoreEntries[key]));
+				}
+			}
+
+			return highscoreEntries;
+		}
+
+		public void updateScore(string id, HighscoreEntry e)
+		{
+			client.Set("highscore/" + id, e);
+		}
     }
 }

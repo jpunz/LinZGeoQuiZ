@@ -29,7 +29,7 @@ namespace LinzGeoQuiz.iOS
 				oAuthLogin.Login(authenticator);
 			};
 
-			LoadApplication(new App());
+			LoadApplication(App.getInstance());
 		    return base.FinishedLaunching(app, options);
 
 			//LoadApplication(new App());

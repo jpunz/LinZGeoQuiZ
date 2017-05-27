@@ -22,19 +22,7 @@ namespace LinzGeoQuiz
 
 		void Logout_Clicked(object sender, System.EventArgs e)
 		{
-			FacebookAPI.createPost("Xamarin is retarded.");
-
-
-			var jsonResponse = "";
-			Task getUserInfo = new Task(() =>
-			{
-				jsonResponse = FacebookAPI.getUserInfo().Result;
-
-			});
-			getUserInfo.Start();
-			getUserInfo.Wait();
-
-			Debug.WriteLine(jsonResponse);
+			FacebookAuth.logout();
 		}
 	}
 }

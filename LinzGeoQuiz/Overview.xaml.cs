@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
+using Logic.Database;
+using Logic.Model;
 
 using Xamarin.Forms;
 
@@ -40,10 +42,24 @@ namespace LinzGeoQuiz
 				if (jsonResponse.Length > 0)
 				{
 					JObject o = JObject.Parse(jsonResponse);
-					LblMail.Text = o.GetValue("email").ToString();
 					LblUser.Text = o.GetValue("name").ToString();
 				}
 			}
+			else
+			{
+				LblUser.Text = "Guest";
+			}
+
+			var highscoreEntries = new Firebase().getHighscoreEntries();
+
+			List<String> items = new List<string>();
+			foreach (KeyValuePair<String, HighscoreEntry> pair in highscoreEntries)
+			{
+				double avgDeviation = pair.Value.sumDistance / pair.Value.sumQuestions;
+				items.Add("#" + (items.Count + 1) + " " + pair.Value.name + ": " + string.Format("{0:0.00}km", avgDeviation));
+			}
+
+			listViewHighscore.ItemsSource = items.ToArray();
 		}
 	}
 }
