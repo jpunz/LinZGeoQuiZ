@@ -8,8 +8,6 @@ namespace LinzGeoQuiz
 {
 	class FacebookAuth
 	{
-		private static bool isAuthenticated = false;
-
 		public static void authenticateFacebook(INavigation navigation)
 		{
 			var auth = new OAuth2Authenticator(
@@ -24,17 +22,12 @@ namespace LinzGeoQuiz
 				if (eventArgs.IsAuthenticated)
 				{
 					Application.Current.Properties["Account"] = eventArgs.Account;
-
-					// TODO remove if finished
-					Debug.WriteLine(eventArgs.Account.Properties["access_token"]);
-
-					isAuthenticated = true;
+					Application.Current.SavePropertiesAsync();
 				}
 				else
 				{
 					// Login canceled
 					Debug.WriteLine("Authentication failed.");
-					isAuthenticated = false;
 				}
 			};
 			presenter.Login(auth);
@@ -43,13 +36,12 @@ namespace LinzGeoQuiz
 		public static void logout()
 		{
 			FacebookAPI.deleteAccessToken();
-			isAuthenticated = false;
 			Application.Current.Properties["Account"] = null;
 		}
 
 		public static bool isFBAuthenticated()
 		{
-			return isAuthenticated;
+			return Application.Current.Properties.ContainsKey("Account");
 		}
 	}
 }
