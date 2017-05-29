@@ -60,6 +60,27 @@ namespace LinzGeoQuiz
 			}
 
 			listViewHighscore.ItemsSource = items.ToArray();
+
+            if(FacebookAuth.isFBAuthenticated())
+            {
+                BtnLogin.Text = "Logout";
+                BtnLogin.Clicked += Logout_Clicked;
+                BtnLogin.Clicked -= Login_Clicked;
+            }
 		}
-	}
+
+        void Login_Clicked(object sender, System.EventArgs e)
+        {
+            FacebookAuth.authenticateFacebook(Navigation);
+        }
+
+        void Logout_Clicked(object sender, System.EventArgs e)
+        {
+            FacebookAuth.logout();
+
+            BtnLogin.Text = "Login with Facebook";
+            BtnLogin.Clicked -= Logout_Clicked;
+            BtnLogin.Clicked += Login_Clicked;
+        }
+    }
 }

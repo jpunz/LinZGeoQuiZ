@@ -146,7 +146,7 @@ namespace LinzGeoQuiz
                     var dist = distance(correctPosition, ((MapViewModel)map.BindingContext).Pins[0].Position);
 					sumDistance += dist;
 
-                    if(dist < 0.01)
+                    if(dist < 0.05)
                     {
                         // Correct
                         LblGeoObjectName.Text = "Correct!";

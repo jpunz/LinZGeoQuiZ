@@ -5,5 +5,5 @@
   <!--Pages can be added as references or inline-->
     <pages:Overview Title="Overview" Icon="home"/>
     <pages:GameSettings Title="Play" Icon="game"/>
-    <pages:Settings Title="Settings" Icon="settings"/>
+    <!--<pages:Settings Title="Settings" Icon="settings"/>-->
 </TabbedPage>

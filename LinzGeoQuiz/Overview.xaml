@@ -4,13 +4,15 @@
 		<StackLayout Spacing="10" x:Name="layout">
 			<Label XAlign="Center" Text="Overview" FontAttributes="Bold" FontSize="30" Margin="0,50,0,0"/>
 
-			<Label x:Name="LblUser" XAlign="Center" Text="Guest" Margin="0,20,0,0"/>
-			<Label x:Name="LblAvgDeviation" XAlign="Center" Text="Avg. Deviation: -" />
+            <Label x:Name="LblUser" XAlign="Center" Text="Guest" Margin="0,20,0,0"/>
+            <Label x:Name="LblAvgDeviation" XAlign="Center" Text="Avg. Deviation: -" />
 			<Label x:Name="LblQuestionCount" XAlign="Center" Text="Questions: 0" />
 			<Label x:Name="LblGameCount" XAlign="Center" Text="Games: 0" />
 
 			<Label Text="Highscore" XAlign="Center" Margin="0,20,0,0" FontAttributes="Bold" />
 			<ListView x:Name="listViewHighscore" HorizontalOptions="Fill" VerticalOptions="EndAndExpand" />
-	    </StackLayout>
+
+            <Button x:Name="BtnLogin" Text="Login with Facebook" TextColor="White" BackgroundColor="DarkBlue" Clicked="Login_Clicked" BorderColor="Gray" BorderWidth="1" HorizontalOptions="Center" />
+        </StackLayout>
 	</ContentPage.Content>
 </ContentPage>
