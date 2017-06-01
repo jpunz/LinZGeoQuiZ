@@ -34,11 +34,11 @@ Brief description (perhaps bulletpoints) on the used technology stack.
 * [Project Proposal](documents/proposal.pdf)
 * [Screen Design](documents/ScreenDesigns.bmpr), [MyBalsamiq](https://www.mybalsamiq.com)
 * [Peer Talk Slides](documents/Peer_Talk.pptx)
-<!--* [UI Sketches](documents/ScreenDesigns/ScreenDesigns.bmpr)-->
-<!--* [Idea Presentation](documents/Final.pptx)-->
-<!--* [Peer Talk Presentation](documents/Perr_Talk.pptx)-->
-<!--* [Final Project Presentation](documents/Final.pptx)-->
+* [UI Sketches](documents/ScreenDesigns/ScreenDesigns.bmpr)-->
+* [Idea Presentation](documents/Final.pptx)-->
+* [Peer Talk Presentation](documents/Perr_Talk.pptx)-->
+* [Final Project Presentation](documents/Final.pptx)-->
 <!--* Code is living in `src`-->
-<!--* [Project Poster](documents/Poster.pdf)-->
-<!--* [System Architecture](documents/SystemArchitecture.pdf)-->
-<!--* [Project Components](documents/ComponentsArchitecture.pdf)-->
+* [Project Poster](documents/Poster.pdf)-->
+* [System Architecture](documents/SystemArchitecture.pdf)-->
+* [Project Components](documents/ComponentsArchitecture.pdf)-->
