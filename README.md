@@ -38,7 +38,6 @@ Brief description (perhaps bulletpoints) on the used technology stack.
 * [Idea Presentation](documents/Final.pptx)
 * [Peer Talk Presentation](documents/Peer_Talk.pptx)
 * [Final Project Presentation](documents/Final.pptx)
-<!--* Code is living in `src`-->
 * [Project Poster](documents/Poster.pdf)
 * [System Architecture](documents/SystemArchitecture.pdf)
 * [Project Components](documents/ComponentArchitecture.pdf)
