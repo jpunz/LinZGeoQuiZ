@@ -33,7 +33,7 @@ Brief description (perhaps bulletpoints) on the used technology stack.
 
 * [Project Proposal](documents/proposal.pdf)
 * [Screen Design Raw](documents/ScreenDesigns/ScreenDesigns.bmpr), [MyBalsamiq](https://www.mybalsamiq.com)
-* [Screen Design](documents/ScreenDesigns), [MyBalsamiq](https://www.mybalsamiq.com)
+* [Screen Design](documents/ScreenDesigns)
 * [Peer Talk Slides](documents/Peer_Talk.pptx)
 * [UI Sketches](documents/ScreenDesigns/ScreenDesigns.bmpr)
 * [Idea Presentation](documents/Final.pptx)
